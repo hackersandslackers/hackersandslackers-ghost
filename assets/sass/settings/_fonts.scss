@@ -1,0 +1,31 @@
+@import url("//hello.myfonts.net/count/3c0ce8");
+
+@font-face {
+  font-display: swap;
+  src: url('/assets/fonts/CamphorPro-Regular.woff2') format('woff2'), url('/assets/fonts/CamphorPro-Regular.woff') format('woff');
+  font-family: 'CamphorPro-Regular';
+}
+
+@font-face {
+  font-display: swap;
+  src: url('/assets/fonts/CamphorPro-Medium.woff2') format('woff2'), url('/assets/fonts/CamphorPro-Medium.woff') format('woff');
+  font-family: 'CamphorPro-Medium';
+}
+
+@font-face {
+  font-display: swap;
+  src: url('/assets/fonts/CamphorPro-Bold.woff2') format('woff2'), url('/assets/fonts/CamphorPro-Bold.woff') format('woff');
+  font-family: 'CamphorPro-Bold';
+}
+
+@font-face {
+  font-display: swap;
+  src: url('/assets/fonts/TTNormsPro-Bold.woff2') format('woff2'), url('/assets/fonts/TTNormsPro-Bold.woff') format('woff');
+  font-family: 'TTNormsPro-Bold';
+}
+
+@font-face {
+  font-display: swap;
+  src: url('/assets/fonts/TTNormsPro-Medium.woff2') format('woff2'), url('/assets/fonts/TTNormsPro-Medium.woff') format('woff');
+  font-family: 'TTNormsPro-Medium';
+}

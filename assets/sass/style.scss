@@ -1,0 +1,70 @@
+// *------------------------------------*\
+// Main Style
+// *------------------------------------*/
+
+// Tools
+@import 'tools/_all';
+
+
+// Settings
+@import 'settings/_all';
+
+
+// Vendor
+@import 'vendor/_all';
+
+
+// Generic
+@import 'generic/_all';
+
+
+// Objects
+@import 'objects/_all';
+
+
+// Elements
+@import 'elements/_all';
+
+
+// Components
+@import 'components/_all';
+
+
+// Trumps
+@import 'trumps/_all';
+
+
+html {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  overflow-x: hidden;
+  overflow-y: scroll;
+
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    background: --bg-white;
+    color: --color-dark;
+    font-family: $body-font;
+    font-size: 16px;
+    font-style: normal;
+    letter-spacing: 0;
+    line-height: 1.3em;
+    text-rendering: optimizelegibility;
+
+    * {
+      &::selection {
+        background: --color-brand;
+        color: white;
+      }
+
+      &::-moz-selection {
+        background: --color-brand;
+        color: white;
+      }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+<div class='c-post-card js-post-card {{ post_class }}'>
+  {{#if feature_image}}
+    <div class='c-post-card__media'>
+      <div class='c-post-card__image-wrap'>
+        <img
+          alt='{{ title }}'
+          class='c-post-card__image lazyload'
+          data-srcset='
+            {{ img_url feature_image size='ml' }} 346w,
+            {{ img_url feature_image size='lg' }} 692w,
+            {{ img_url feature_image size='xl' }} 1384w'
+          sizes='(min-width: 1260px) 692px, (min-width: 1040px) calc(34vw + 270px), (min-width: 640px) calc(90vw - 61px), calc(100vw - 32px)'
+          data-src='{{ img_url feature_image size='xl' }}'
+        >
+      </div>
+    </div>
+  {{/if}}
+
+  <div class='c-post-card__content'>
+    <h2 class='c-post-card__title'>
+      <a href='{{ url }}' class='c-post-card__url'>{{ title }}</a>
+
+      <!--<div class='c-post-card__visibility c-post-card__visibility--{{ visibility }}'>
+        <span class='paid'>{{t 'Paid' }}</span>
+        <span class='members'>{{t 'Members' }}</span>
+        <span class='public'>{{t 'Public' }}</span>
+      </div>-->
+    </h2>
+
+    <p class='c-post-card__excerpt'>{{ excerpt }}</p>
+
+    <div class='c-post-card__meta'>
+      {{#primary_author}}
+        <a href='{{ url }}' class='c-post-card__author'>
+          {{#if profile_image}}
+            <div class='c-post-card__author_media'>
+              <img class='c-post-card__author_image lazyload' data-src='{{ img_url profile_image size='xs' }}' alt='{{ name }}' width='32' height='32'>
+            </div>
+          {{/if}}
+          <div class='c-post-card__author_info'>
+            <div class='c-post-card__author_name'>{{ name }}</div>{{/primary_author}}
+            <time class='c-post-card__date' datetime='{{ date format='YYYY-MM-DD' }}' title='{{ date format='DD MMMM YYYY' }}'>{{ date format='DD MMM YYYY' }}</time>
+          </div>
+        </a>
+
+      <div class='c-post-card__tag'>
+        {{ tags separator=' / ' limit='1' }}
+      </div>
+    </div>
+
+  </div>
+</div>

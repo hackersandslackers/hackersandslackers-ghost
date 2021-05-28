@@ -1,0 +1,31 @@
+/*------------------------------------*\
+  Components > Social Icons / Footer
+\*------------------------------------*/
+
+.c-social-icons {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  border: .5px solid var(--color-border);
+  border-radius: $global-border-radius;
+  background-color: var(--bg-white);
+
+  &__item {
+    width: $space-40;
+    height: $space-40;
+  }
+
+  &__icon {
+    fill: var(--color-gray);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: $space-40;
+    height: $space-40;
+    transition: fill $global-transition;
+
+    @include attention() {
+      fill: var(--color-text);
+    }
+  }
+}
