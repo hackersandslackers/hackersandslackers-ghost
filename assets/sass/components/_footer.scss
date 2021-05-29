@@ -3,10 +3,28 @@
 \*------------------------------------*/
 
 .c-footer {
-  padding: $space-40 0;
+  justify-content: space-around;
   margin-top: $space-40;
-  background-color: var(--bg-white);
+  padding: $space-40 0;
   border-top: .5px solid var(--color-border);
+  background-color: var(--bg-white);
+
+  .o-grid {
+    justify-content: space-between;
+    padding: 0 !important;
+  }
+
+  .footer-section {
+    max-width: 27%;
+  }
+
+  .footer-title {
+    color: var(--color-dark);
+    font-family: $header-font-secondary;
+    font-size: 18px;
+    text-transform: uppercase;
+
+  }
 
   @include mq($from: desktop) {
     padding-top: $space-80;
@@ -25,13 +43,18 @@
     }
   }
 
+  .footer-logo {
+    width: 220px;
+    margin-bottom: 20px;
+  }
+
   &__headline {
     margin-bottom: $space-16;
     font-size: $type-sm;
-    line-height: $type-sm-lh;
     font-weight: $type-500;
-    text-transform: uppercase;
     letter-spacing: $global-letter-spacing;
+    line-height: $type-sm-lh;
+    text-transform: uppercase;
   }
 
   &__copyright {
@@ -39,8 +62,8 @@
     text-align: center;
 
     @include mq($from: tablet) {
-      padding-top: $space-16;
       margin-top: $space-32;
+      padding-top: $space-16;
       border-top: .5px solid var(--color-border);
     }
 
@@ -62,12 +85,12 @@
 
   a {
     display: block;
-    padding: 0;
-    font-weight: $type-400;
-    font-size: $type-sm;
-    line-height: $type-sm-lh;
     margin-bottom: half($space-8);
+    padding: 0;
     padding-bottom: half($space-8);
+    font-size: $type-sm;
+    font-weight: $type-400;
+    line-height: $type-sm-lh;
     transition: color $global-faster-transition ease-in-out;
 
     @include attention() {

@@ -1,33 +1,74 @@
 <footer class='c-footer'>
   <div class='o-grid'>
 
-    <div class='o-grid__col o-grid__col--4-4-s o-grid__col--2-4-m o-grid__col--1-3-l c-footer__section'>
-      <p class='c-footer__headline'>{{ @site.title }}</p>
+    <div class='footer-section'>
+      {{#if @site.logo}}
+        <a href='{{ @site.url }}'>
+          <img class='footer-logo' src='{{ @site.logo }}' alt='{{ @site.title }}' />
+        </a>
+      {{else}}
+        <a class='c-logo__link' href='{{ @site.url }}'>{{ @site.title }}</a>
+      {{/if}}
       <p class='u-type-md u-color-gray'>{{ @site.description }}</p>
     </div>
 
+      <div class='footer-section'>
+        <h4 class='footer-title'>{{t "Series'" }}</h4>
+        <ul>
+          {{#get "tags" limit='6' visibility="internal"}}
+            {{#foreach tags}}
+              <li>
+                <a
+                  href="/series/{{slug}}"
+                  title="{{name}}"
+                  class="series series-{{id}} {{slug}}"
+                />
+                {{name}}
+                </a>
+              </li>
+            {{/foreach}}
+          {{/get}}
+        </ul>
+      </div>
+
     {{#if @site.secondary_navigation}}
-      <div class='o-grid__col o-grid__col--initial-grow o-grid__col--4-4-s o-grid__col--2-4-m o-grid__col--1-3-l c-footer__section'>
-        <p class='c-footer__headline'>{{t 'Navigation' }}</p>
+      <div class='footer-section'>
+        <h4 class='footer-title'>{{t 'Navigation' }}</h4>
         <ul class='c-footer-list o-plain-list'>
           {{ navigation type='secondary' }}
         </ul>
       </div>
     {{/if}}
 
+    <div class='footer-section'>
+      <h4 class='footer-title'>{{t 'Authors' }}</h4>
+      <ul class='c-footer-list o-plain-list'>
+        {{#get 'authors' limit='5' order="posts.count desc"}}
+          {{#foreach authors}}
+            <li>
+              <a href="/authors/{{slug}}" title="{{name}}" class="author author-{{id}} {{slug}}" />
+              {{name}}
+              </a>
+            </li>
+          {{/foreach}}
+        {{/get}}
+      </ul>
+    </div>
+
+
     {{#unless @member}}
-      <div class='o-grid__col o-grid__col--initial-grow o-grid__col--4-4-s o-grid__col--2-4-m o-grid__col--1-3-l c-footer__section'>
+      <div class='footer-section'>
         <p class='c-footer__headline'>{{t 'Newsletter' }}</p>
         {{> subscribe-form inputLabel='subscribe-email-footer'}}
       </div>
     {{/unless}}
 
-    <div class='o-grid__col o-grid__col--4-4-s c-footer__section'>
-      <div class='u-type-xs c-footer__copyright'>
-        &copy; {{ date format='YYYY' }} {{ @site.title }} -
-        {{{t 'Published with {ghostLink} & {themeLink}' ghostLink='<a href=\'https://ghost.org\'>Ghost</a>' themeLink='<a href=\'https://aspirethemes.com/themes/krabi\'>Krabi</a>' }}}
-      </div>
-    </div>
+  </div>
 
+  <div>
+    <div class='u-type-xs c-footer__copyright'>
+      &copy; {{ date format='YYYY' }} {{ @site.title }} -
+      {{{t 'Published with {ghostLink} & {themeLink}' ghostLink='<a href=\'https://ghost.org\'>Ghost</a>' themeLink='<a href=\'https://aspirethemes.com/themes/krabi\'>Krabi</a>' }}}
+    </div>
   </div>
 </footer>
