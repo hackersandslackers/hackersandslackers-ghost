@@ -71,10 +71,16 @@
     }
   }
 
+  .main-nav-link {
+    color: var(--color-nav-link);
+    font-family: $body-font-bold;
+    font-size: $type-md;
+  }
+
   &__link {
     display: flex;
     align-items: center;
-    color: var(--color-gray);
+    color: var(--color-nav-link);
     font-size: $type-xs;
     font-weight: $type-600;
     letter-spacing: $global-letter-spacing;

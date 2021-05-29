@@ -3,7 +3,7 @@
 \*------------------------------------*/
 
 .c-logo {
-  margin-right: $space-32;
+  margin-right: 25px;
 
   &__link {
     display: block;
@@ -18,6 +18,6 @@
   }
 
   &__img {
-    max-height: 50px;
+    max-height: 40px;
   }
 }

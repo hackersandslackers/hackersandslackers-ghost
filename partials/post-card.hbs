@@ -43,9 +43,15 @@
           </div>
         </a>
 
-      <div class='c-post-card__tag'>
-        {{ tags separator=' / ' limit='1' }}
-      </div>
+      {{#primary_tag}}
+        <a
+          href="{{url}}"
+          class="primary-tag"
+          style="background-color:{{ accent_color }}; border: 1px solid {{ accent_color }};"
+          >
+          {{name}}
+        </a>
+      {{/primary_tag}}
     </div>
 
   </div>

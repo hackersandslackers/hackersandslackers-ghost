@@ -54,41 +54,13 @@
     transition: transition(all 1s, ease-out);
 
     @include mq($from: tablet) {
-      font-size: $type--h-xs;
-      line-height: $type--h-xs-lh;
+      font-size: $type--h-xs-lh;
     }
 
     @include mq($from: desktop) {
       font-size: $type--h-sm;
-      line-height: $type--h-sm-lh;
     }
   }
-
-  /*&__url:after {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 1;
-  }
-
-  &__visibility {
-    display: inline-block;
-    font-size: $type-xs;
-    line-height: $type-xs-lh;
-    font-weight: $type-500;
-    color: var(--color-success);
-
-    span { display: none; }
-
-    &--paid .paid,
-    &--members .members,
-    &--public .public {
-      display: block;
-    }
-  }*/
 
   &__excerpt {
     -webkit-line-clamp: 3;
@@ -159,8 +131,18 @@
     border-radius: 100%;
   }
 
-  &__tag {
-    margin-left: $space-16;
-    color: var(--color-brand);
+  .primary-tag {
+    padding: 6px;
+    border-radius: 3px;
+    color: white;
+    font-size: 1.1em;
+    font-weight: 600;
+    line-height: $type-single-line-height;
+    transition: 0.2s all ease-out;
+
+    &:hover {
+      background: white;
+      cursor: pointer;
+    }
   }
 }
