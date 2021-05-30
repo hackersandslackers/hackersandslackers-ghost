@@ -1,7 +1,6 @@
 // *----------------------------------*\
 // Tools > Mixins
 // *----------------------------------*/
-
 // Apply ‘attention’ styles in one go.
 // https://goo.gl/LFx8on
 //
@@ -10,11 +9,256 @@
 // @include attention() {
 //   text-decoration: underline;
 // }
-
 @mixin attention() {
-  &:hover,
   &:active,
-  &:focus {
+  &:focus,
+  &:hover {
     @content;
   }
+}
+@mixin link() {
+  border-bottom: 1px solid $theme-color;
+  color: $body-color;
+  word-break: break-word;
+  transition: $transition;
+
+  &:hover {
+    color: $theme-color !important;
+  }
+}
+@mixin figcaption() {
+  width: stretch;
+  width: -moz-available;
+  margin: 0 auto;
+  padding: 8px 0 0;
+  color: #737883;
+  font-family: $body-font-medium;
+  font-size: 0.8em;
+  line-height: 1.4;
+  text-align: center;
+  white-space: normal;
+  @media (max-width: $mobile-breakpoint) {
+    display: block;
+    width: 87% !important;
+    height: auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+@mixin link() {
+  a {
+    color: #737883;
+  }
+}
+@mixin mobile-full-width() {
+  min-width: 100%;
+  margin-right: calc("-50vw + 50%") !important;
+  margin-left: calc("-50vw + 50%") !important;
+  border-right: 0;
+  border-left: 0;
+}
+@mixin mobile-horizontal-scroll() {
+  -webkit-overflow-scrolling: touch;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+
+  &:hover {
+    cursor: grab;
+  }
+
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    background: transparent;
+  }
+}
+@mixin mobile-horizontal-scroll-child() {
+  display: inline;
+}
+@mixin figcaption {
+  width: stretch;
+  width: -moz-available;
+  margin: 0 auto;
+  padding: 8px 0 0;
+  color: #737883;
+  font-family: $body-font-medium;
+  font-size: 0.8em;
+  line-height: 1.4;
+  text-align: center;
+  white-space: normal;
+  @media (max-width: $mobile) {
+    display: block;
+    width: 87% !important;
+    height: auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  a {
+    @include link;
+    color: #737883;
+  }
+}
+@mixin code-figcaption {
+  order: 1;
+  width: stretch;
+  width: -moz-available;
+  margin: 0 auto;
+  padding: 14px 15px 10px;
+  border-radius: 4px 4px 0 0;
+  background: #20242c;
+  color: #d2d7e1;
+  font-family: $body-font-medium;
+  font-size: 0.95em;
+  line-height: 1;
+  text-align: left;
+  white-space: normal;
+  @media (max-width: $mobile) {
+    @include mobile-full-width;
+    padding: 15px;
+    border-top: 1px solid #dde1e9;
+    border-radius: 0;
+    line-height: 1;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+@mixin inline-code {
+  display: inline;
+  padding: 2px 4px;
+  overflow-y: visible;
+  border-radius: 3px;
+  background: rgba(144, 181, 223, 0.15);
+  color: #3e6c97;
+  font-family: $monospace-font;
+  font-size: 0.9em;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+@mixin paragraph {
+  -webkit-font-smoothing: auto;
+  margin: 0 0 25px;
+  color: #414d5a;
+  font-family: $body-font;
+  font-size: 1em;
+  line-height: 1.8em;
+}
+
+@mixin post-intro-notice {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  margin: 25px 0 30px auto;
+  padding: 20px;
+  border-radius: 5px;
+  background: #eceef1;
+  color: #6e7482;
+  font-family: $body-font-medium;
+  font-size: .95em;
+  font-style: italic;
+  line-height: 1.6;
+  @media (max-width: $mobile) {
+    align-items: flex-start;
+  }
+
+  img {
+    min-width: 40px;
+    height: 40px;
+    margin-right: 15px;
+    opacity: .7;
+    @media (max-width: $mobile) {
+      min-width: 50px;
+      margin: 10px 10px 0 0;
+    }
+  }
+
+  p {
+    margin: 0;
+    color: #677584;
+    line-height: 1.6em;
+    @media (max-width: $mobile) {
+      line-height: 1.5em;
+    }
+
+    a {
+      border-bottom: 1px solid #638cca;
+      color: #638cca;
+      word-break: break-word;
+      transition: all .2s ease-out;
+
+      &:hover {
+        border-color: --color-brand;
+        color: --color-brand;
+      }
+    }
+  }
+}
+
+@mixin lynx-roundup-blurb {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  width: auto;
+  min-height: 35px;
+  margin: 60px 0;
+  padding: 15px 30px;
+  border-top: 0;
+  border-bottom: 0;
+  border-left: 5px solid #c8dec8;
+  border-radius: 3px;
+  background: 0 0;
+  background: #e9f3e9;
+  box-shadow: -2px 2px 0 #d5e6d7;
+  @media (max-width: $smalldesktop) {
+    margin: 70px 70px 40px;
+  }
+  @media (max-width: $tablet) {
+    margin: 70px 50px 40px;
+    padding: 15px 20px;
+  }
+  @media (max-width: $mobile) {
+    margin: 70px 30px 40px;
+  }
+
+  svg {
+    margin-right: 20px;
+    color: #9dc29f;
+    font-size: 40px;
+    @media (max-width: $tablet) {
+      min-width: 30px;
+      min-height: 30px;
+      margin-right: 15px;
+      color: #9dc29f;
+      font-size: 3em;
+    }
+    @media (max-width: $mobile) {
+      height: unset;
+      min-height: unset;
+      font-size: 4em;
+    }
+  }
+
+  p {
+    color: #789a7b;
+    font-family: $body-font-bold;
+    font-size: .9em;
+    line-height: 1.5;
+  }
+}
+
+@mixin post-tag-footer {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 9px 10px 7px;
+    border-radius: 3px;
+    background: hsla(0,0%,93.3%,.7);
+    color: #6b7583!important;
+    font-family: $body-font-medium;
+    font-size: .85em;
+    line-height: 1;
+    transition: all .2s ease-out;
 }

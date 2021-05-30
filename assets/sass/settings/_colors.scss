@@ -4,6 +4,7 @@
 
 :root {
   --color-brand:     #0297f6;
+  --color-hover:     #40cebb;
   --color-white:     #FFFFFF;
   --color-dark:      #414d5a;
   --color-text:      #414d5a;
@@ -13,12 +14,13 @@
   --color-border:    #EAECEE;
   --header-color:    #4e576a;
   --color-nav-link:  #6c768b;
+  --color-inline-code: #3e6c97;
 
   --bg-gray:         #F5F7F9;
   --bg-gray-darker:  #EDEFF1;
   --bg-dark:         #12245A;
   --bg-white:        #f4f8fb;
 
-  --color-code-inline: var(--color-text);
+  --color-code-inline: var(--color-inline-code);
   --bg-tag-list:       linear-gradient(to left, var(--bg-white), rgba(255, 255, 255, 0));
 }

@@ -10,16 +10,9 @@
 
     {{> tags-list }}
 
-      <main class='main-grid'>
-        <div>
-          {{{ body }}}
-        </div>
-        <div>
-          {{> sidebar }}
-        </div>
-      </main>
+    {{> layout }}
 
-    {{> footer}}
+    {{> footer }}
   </div>
 
   <script src='{{ asset 'js/app.min.js' }}'></script>

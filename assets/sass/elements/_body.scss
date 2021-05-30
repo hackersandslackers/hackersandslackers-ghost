@@ -7,9 +7,12 @@ body {
   -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale;
   background-color: var(--bg-gray);
-  color: var(--color-text);
   font-family: $body-font;
   font-size: $type-md;
   line-height: $line-height-base;
   direction: ltr;
+
+  p {
+    color: var(--color-text);
+  }
 }

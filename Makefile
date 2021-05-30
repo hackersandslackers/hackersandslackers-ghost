@@ -43,5 +43,4 @@ reset: clean
 .PHONY: update
 update:
 	ncu -u --dep=prod
-	npm i
-	npm audit fix
+	yarn install

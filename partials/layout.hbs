@@ -1,0 +1,18 @@
+{{#is "post"}}
+<div class="post-wrapper">
+  <article class='post'>
+    {{{ body }}}
+  </article>
+</div>
+{{/is}}
+
+{{#is "home,page,tag,author,paged"}}
+  <main class='main-grid'>
+    <div>
+      {{{ body }}}
+    </div>
+    <div>
+      {{> sidebar }}
+    </div>
+  </main>
+{{/is}}
