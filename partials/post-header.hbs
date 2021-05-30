@@ -1,15 +1,9 @@
 {{#if feature_image}}
   <figure class='c-post-image-wrap'>
-    <img
-      alt=''
-      class='c-post-image lazyload'
-      data-srcset='
+    <img alt='' class='c-post-image lazyload' data-srcset='
         {{ img_url feature_image size='ml' }} 346w,
         {{ img_url feature_image size='lg' }} 692w,
-        {{ img_url feature_image size='xl' }} 1384w'
-      sizes='(min-width: 1260px) 692px, (min-width: 1040px) calc(34vw + 270px), (min-width: 640px) calc(90vw - 61px), calc(100vw - 32px)'
-      data-src='{{ img_url feature_image size='xl' }}'
-    >
+        {{ img_url feature_image size='xl' }} 1384w' sizes='(min-width: 1260px) 692px, (min-width: 1040px) calc(34vw + 270px), (min-width: 640px) calc(90vw - 61px), calc(100vw - 32px)' data-src='{{ img_url feature_image size='xl' }}'>
   </figure>
 {{/if}}
 
@@ -31,11 +25,11 @@
           {{/if}}
           <div class='c-post-header__author_info'>
             <div class='c-post-header__author_name'>{{ name }}</div>{{/primary_author}}
-            <time class='c-post-header__date' datetime='{{ date format='YYYY-MM-DD' }}' title='{{ date format='DD MMMM YYYY' }}'>{{ date format='DD MMM YYYY' }}</time>
-          </div>
-        </a>
+      <time class='c-post-header__date' datetime='{{ date format='YYYY-MM-DD' }}' title='{{ date format='DD MMMM YYYY' }}'>{{ date format='DD MMM YYYY' }}</time>
+    </div>
+    </a>
 
-      {{> share }}
+    {{> share }}
     </div>
   {{/is}}
 </header>

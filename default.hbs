@@ -4,21 +4,20 @@
 {{> head }}
 
 <body class='{{ body_class }}'>
+  {{> sprites}}
   <div class='c-site-container'>
     {{> header }}
 
     {{> tags-list }}
 
-    <main class='o-wrapper'>
-      <div class='main-grid'>
+      <main class='main-grid'>
         <div>
           {{{ body }}}
         </div>
         <div>
           {{> sidebar }}
         </div>
-      </div>
-    </main>
+      </main>
 
     {{> footer}}
   </div>

@@ -1,12 +1,11 @@
 /*------------------------------------*\
   Components > Footer
 \*------------------------------------*/
-
 .c-footer {
   justify-content: space-around;
   margin-top: $space-40;
   padding: $space-40 0;
-  border-top: .5px solid var(--color-border);
+  border-top: 0.5px solid var(--color-border);
   background-color: var(--bg-white);
 
   .o-grid {
@@ -16,16 +15,18 @@
 
   .footer-section {
     max-width: 27%;
+
+    &.info-section {
+      max-width: 23%;
+    }
   }
 
   .footer-title {
     color: var(--color-dark);
     font-family: $header-font-secondary;
-    font-size: 18px;
+    font-size: 16px;
     text-transform: uppercase;
-
   }
-
   @include mq($from: desktop) {
     padding-top: $space-80;
   }
@@ -35,12 +36,16 @@
       margin-bottom: $space-16;
       padding-bottom: $space-16;
     }
-
     @include mq($until: tablet) {
       margin-bottom: $space-24;
       padding-bottom: $space-24;
-      border-bottom: .5px solid var(--color-border);
+      border-bottom: 0.5px solid var(--color-border);
     }
+  }
+
+  .footer-description {
+    font-size: 16px;
+    line-height: 1.4;
   }
 
   .footer-logo {
@@ -60,17 +65,15 @@
   &__copyright {
     color: var(--color-gray);
     text-align: center;
-
     @include mq($from: tablet) {
       margin-top: $space-32;
       padding-top: $space-16;
-      border-top: .5px solid var(--color-border);
+      border-top: 0.5px solid var(--color-border);
     }
 
     a {
       color: var(--color-gray);
       transition: color $global-faster-transition;
-
       @include attention() {
         color: var(--color-brand);
       }
@@ -86,13 +89,11 @@
   a {
     display: block;
     margin-bottom: half($space-8);
-    padding: 0;
-    padding-bottom: half($space-8);
+    padding: 0 0 half($space-8);
     font-size: $type-sm;
     font-weight: $type-400;
     line-height: $type-sm-lh;
     transition: color $global-faster-transition ease-in-out;
-
     @include attention() {
       color: var(--color-brand);
     }

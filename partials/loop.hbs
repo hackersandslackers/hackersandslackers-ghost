@@ -1,5 +1,3 @@
-<div class='js-grid'>
-  {{#foreach posts}}
+  {{#foreach posts filter="tags:-[hash-hidden,Roundup,roundup]"}}
     {{> post-card }}
   {{/foreach}}
-</div>

@@ -1,28 +1,54 @@
 <footer class='c-footer'>
   <div class='o-grid'>
 
-    <div class='footer-section'>
-      {{#if @site.logo}}
-        <a href='{{ @site.url }}'>
-          <img class='footer-logo' src='{{ @site.logo }}' alt='{{ @site.title }}' />
-        </a>
-      {{else}}
-        <a class='c-logo__link' href='{{ @site.url }}'>{{ @site.title }}</a>
-      {{/if}}
-      <p class='u-type-md u-color-gray'>{{ @site.description }}</p>
-    </div>
+    {{#if @site.description }}
+      <div class='footer-section info-section'>
+        {{#if @site.logo}}
+          <a href='{{ @site.url }}'>
+            <img class='footer-logo' src='{{ @site.logo }}' alt='{{ @site.title }}' />
+          </a>
+        {{else}}
+          <a class='c-logo__link' href='{{ @site.url }}'>{{ @site.title }}</a>
+        {{/if}}
+        <p class='footer-description'>{{ @site.description }}</p>
+      </div>
+    {{/if}}
 
+    {{#if @site.navigation}}
+      <div class='footer-section'>
+        <h4 class='footer-title'>{{t 'Navigation' }}</h4>
+        <ul class='c-footer-list o-plain-list'>
+          {{ navigation }}
+        </ul>
+      </div>
+    {{/if}}
+
+    {{#if 'tags'}}
       <div class='footer-section'>
         <h4 class='footer-title'>{{t "Series'" }}</h4>
-        <ul>
-          {{#get "tags" limit='6' visibility="internal"}}
-            {{#foreach tags}}
+          <ul class='c-footer-list o-plain-list tags_list'>
+            {{#get "tags"
+              limit="60"
+              include="count.posts"
+              filter="feature_image:-null+slug:-[adventures-in-excel,microsoft-powerpivot,code-snippet-corner,mongodb-cloud]"
+              order="count.posts DESC"
+            }}
+              {{#foreach tags visibility='internal'}}
+                <li><a href="/series/{{slug}}">{{meta_title}}</a></li>
+              {{/foreach}}
+            {{/get}}
+          </ul>
+      </div>
+    {{/if}}
+
+    {{#if 'authors'}}
+      <div class='footer-section'>
+        <h4 class='footer-title'>{{t 'Authors' }}</h4>
+        <ul class='c-footer-list o-plain-list'>
+          {{#get 'authors' limit='8' order="posts.count desc"}}
+            {{#foreach authors}}
               <li>
-                <a
-                  href="/series/{{slug}}"
-                  title="{{name}}"
-                  class="series series-{{id}} {{slug}}"
-                />
+                <a href="/authors/{{slug}}" title="{{name}}" class="author author-{{id}} {{slug}}" />
                 {{name}}
                 </a>
               </li>
@@ -30,35 +56,11 @@
           {{/get}}
         </ul>
       </div>
-
-    {{#if @site.secondary_navigation}}
-      <div class='footer-section'>
-        <h4 class='footer-title'>{{t 'Navigation' }}</h4>
-        <ul class='c-footer-list o-plain-list'>
-          {{ navigation type='secondary' }}
-        </ul>
-      </div>
     {{/if}}
-
-    <div class='footer-section'>
-      <h4 class='footer-title'>{{t 'Authors' }}</h4>
-      <ul class='c-footer-list o-plain-list'>
-        {{#get 'authors' limit='5' order="posts.count desc"}}
-          {{#foreach authors}}
-            <li>
-              <a href="/authors/{{slug}}" title="{{name}}" class="author author-{{id}} {{slug}}" />
-              {{name}}
-              </a>
-            </li>
-          {{/foreach}}
-        {{/get}}
-      </ul>
-    </div>
-
 
     {{#unless @member}}
       <div class='footer-section'>
-        <p class='c-footer__headline'>{{t 'Newsletter' }}</p>
+        <h4 class='footer-title'>{{t 'Newsletter' }}</h4>
         {{> subscribe-form inputLabel='subscribe-email-footer'}}
       </div>
     {{/unless}}
@@ -67,8 +69,7 @@
 
   <div>
     <div class='u-type-xs c-footer__copyright'>
-      &copy; {{ date format='YYYY' }} {{ @site.title }} -
-      {{{t 'Published with {ghostLink} & {themeLink}' ghostLink='<a href=\'https://ghost.org\'>Ghost</a>' themeLink='<a href=\'https://aspirethemes.com/themes/krabi\'>Krabi</a>' }}}
+      &copy; {{ date format='YYYY' }} {{ @site.title }}
     </div>
   </div>
 </footer>

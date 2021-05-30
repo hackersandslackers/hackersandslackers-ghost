@@ -1,34 +1,44 @@
 /*------------------------------------*\
   Elements > Inputs
 \*------------------------------------*/
-
 $input-color-border: #DFE3E9;
 
-input[type='text'],
+input {
+  display: block;
+  border: 1px solid $input-color-border;
+  border-radius: $global-border-radius;
+  background-color: var(--color-white);
+  color: var(--color-text);
+  font-family: $body-font;
+}
+
 input[type='password'],
 input[type='date'],
 input[type='month'],
 input[type='week'],
-input[type='email'],
 input[type='number'],
 input[type='search'],
 input[type='tel'],
 input[type='time'],
-input[type='url'],
 input[type='color'],
 input[type='datetime'],
 input[type='datetime-local'],
 select,
 textarea {
   width: 100%;
-  display: block;
-  padding: $space-8 $space-16;
-  margin-bottom: $space-16;
-  border: 1px solid $input-color-border;
-  border-radius: $global-border-radius;
-  color: var(--color-text);
-  background-color: var(--color-white);
+  margin-bottom: 15px;
+  padding: 10px 14px;
   font-size: $type-md;
-  line-height: $type-md-lh;
-  font-family: $body-font;
+  line-height: $type-xs;
+}
+
+input[type='text'],
+input[type='url'],
+input[type='email'] {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px 14px;
+  font-size: $type-md;
+  font-size: 14px;
+  line-height: 0;
 }

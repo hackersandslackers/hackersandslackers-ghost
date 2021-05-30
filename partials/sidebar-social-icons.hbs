@@ -1,15 +1,3 @@
-{{#if @site.secondary_navigation}}
   <div class='c-widget'>
-    <ul class='c-social-icons o-plain-list'>
-      {{#foreach secondary_navigation}}
-        <li class="nav-{{slug}}">
-          <a href="{{url}}" class="social-link">
-            <svg width="32" height="32" role="img" aria-label="{{slug}} icon">
-              <use xlink:href="#{{slug}}"></use>
-            </svg>
-          </a>
-        </li>
-      {{/foreach}}
-    </ul>
+      {{navigation type="secondary"}}
   </div>
-{{/if}}

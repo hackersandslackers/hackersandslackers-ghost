@@ -6,7 +6,7 @@
   "engines": {
     "node": ">=14",
     "ghost": ">=4.0.0",
-    "ghost-api": "v4"
+    "ghost-api": ">=4"
   },
   "keywords": [
     "ghost",
@@ -24,7 +24,7 @@
     "concat": "^3.0.0",
     "evil-icons": "^1.10.1",
     "fs": "0.0.2",
-    "gulp-autoprefixer": "^7.0.1",
+    "gulp-autoprefixer": "^8.0.0",
     "gulp-clean-css": "^4.3.0",
     "gulp-concat": "^2.6.1",
     "gulp-jshint": "^2.1.0",
@@ -60,9 +60,6 @@
   "config": {
     "posts_per_page": 8,
     "image_sizes": {
-      "xs": {
-        "width": 64
-      },
       "sm": {
         "width": 128
       },

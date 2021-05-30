@@ -1,0 +1,26 @@
+.main-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr !important;
+  max-width: 1142px;
+  margin: auto;
+  column-gap: 50px;
+  @media(max-width: $desktop) {
+    grid-template-columns: 2fr 1fr !important;
+    max-width: 1000px;
+    margin: auto;
+    column-gap: 50px;
+  }
+  @media(max-width: $smalldesktop) {
+    max-width: 95% !important;
+  }
+  @media(max-width: $tablet) {
+    grid-template-columns: 1fr !important;
+    max-width: 90%;
+  }
+
+  .o-wrapper {
+    @include mq($from: mobile) {
+      grid-template-columns: 1fr !important;
+    }
+  }
+}
