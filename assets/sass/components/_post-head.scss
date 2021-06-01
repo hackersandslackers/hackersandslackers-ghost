@@ -18,8 +18,8 @@
     width: -moz-available;
     max-width: 720px;
     margin: 60px auto 0;
-    color: --header-color;
-    font-family: $header-font;
+    color: var(--header-color);
+    font-family: var(--header-font);
     font-size: 2.1em;
     font-weight: unset;
     line-height: 1.1;

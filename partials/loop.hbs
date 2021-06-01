@@ -1,3 +1,3 @@
-  {{#foreach posts filter="tags:-[hash-hidden,Roundup,roundup]"}}
-    {{> post-card }}
+  {{#foreach posts filter="tags:-[hash-hidden,roundup]+primary_tag:{{primary_tag.slug}}"}}
+    {{> post-card}}
   {{/foreach}}
