@@ -5,7 +5,7 @@
 {{#get 'posts'
   limit='3'
   include='authors,tags'
-  filter='filter="tags:[{{post.tags}}]+id:-{{id}}+tags:-[hash-hidden,roundup]'
+  filter='filter="tags:[{{post.tags}}]+slug:-{{slug}}+tags:-[hash-hidden,roundup]'
   order="published_at desc" as |related-posts|}}
   {{#if related-posts}}
     <div class='c-related'>

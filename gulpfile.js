@@ -7,7 +7,7 @@
       sass         = require('gulp-sass'),
       rtlcss       = require('gulp-rtlcss'),
       cleanCSS     = require('gulp-clean-css'),
-      autoprefixer = require('gulp-autoprefixer'),
+      autoprefixer  = require('gulp-autoprefixer'),
       concat       = require('gulp-concat'),
       rename       = require('gulp-rename'),
       uglify       = require('gulp-uglify'),

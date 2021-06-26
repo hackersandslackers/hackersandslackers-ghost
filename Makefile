@@ -31,9 +31,10 @@ dev: build
 .PHONY: clean
 clean:
 	find . -name 'package-lock.json' -delete
-	find . -name 'yarn.lock' -delete
+	find . -wholename '*.lock' -delete
 	find . -wholename '.yarn' -delete
 	find . -wholename '**/node_modules' -delete
+	find . -wholename '**/bower_components' -delete
 
 .PHONY: reset
 reset: clean
