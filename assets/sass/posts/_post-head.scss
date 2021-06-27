@@ -7,15 +7,14 @@
   @media (max-width: 850px) {
     padding: 0;
   }
-  @media (max-width: $mobile) {
+  @media (max-width: 600px) {
     flex-direction: column;
   }
 
   .post-title {
     display: block;
     order: 2;
-    width: stretch;
-    width: -moz-available;
+    @include fill-available();
     max-width: 720px;
     margin: 60px auto 0;
     color: var(--header-color);
@@ -24,11 +23,11 @@
     font-weight: unset;
     line-height: 1.1;
     text-align: center;
-    @media (max-width: $smalldesktop) {
+    @media (max-width: 1000px) {
       padding: 0 8%;
       font-size: 1.9em;
     }
-    @media (max-width: $mobile) {
+    @media (max-width: 600px) {
       order: 1;
       margin: 0 auto;
       padding: 0 20px;
@@ -49,12 +48,12 @@
   background-position-y: center !important;
   background-size: cover !important;
   box-shadow: 0 1px 3px rgba(39, 44, 49, 0.1);
-  @media (max-width: $smalldesktop) {
+  @media (max-width: 1000px) {
     min-height: unset;
     margin: 0 30px;
     @include mobile-full-width;
   }
-  @media (max-width: $mobile) {
+  @media (max-width: 600px) {
     margin: 0;
     box-shadow: 0 0 5px rgba(46, 63, 78, 0.1);
   }
@@ -64,10 +63,10 @@
     height: auto;
     min-height: 490px;
     line-height: 1;
-    @media (max-width: $smalldesktop) {
+    @media (max-width: 1000px) {
       min-height: unset;
     }
-    @media (max-width: $mobile) {
+    @media (max-width: 600px) {
       border: 0;
     }
   }
@@ -79,10 +78,10 @@
   width: fit-content;
   max-width: 780px;
   margin: 15px auto 0;
-  @media(max-width: $smalldesktop) {
+  @media(max-width: 1000px) {
     padding: 0 8%;
   }
-  @media (max-width: $mobile) {
+  @media (max-width: 600px) {
     flex-wrap: wrap;
     align-items: center;
     justify-content: left;
@@ -108,7 +107,7 @@
     font-size: 1.1em;
     line-height: 1;
     text-transform: capitalize;
-    @media (max-width: $mobile) {
+    @media (max-width: 600px) {
       height: 14px;
       margin: 0 20px 0 0;
       font-size: 1.2em;
@@ -147,7 +146,7 @@
     }
 
     &.date {
-      @media (max-width: $mobile) {
+      @media (max-width: 600px) {
         display: none;
       }
     }
@@ -176,10 +175,10 @@
       text-decoration: none;
 
       &:hover {
-        color: --color-hover;
+        color: $hover-color;
 
         & > span {
-          color: --color-hover !important;
+          color: $hover-color !important;
         }
       }
     }

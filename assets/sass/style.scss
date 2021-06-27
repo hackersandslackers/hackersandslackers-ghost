@@ -1,6 +1,7 @@
 // *------------------------------------*\
 // Main Style
 // *------------------------------------*/
+@import 'breakpoints';
 // Tools
 @import 'tools/_all';
 // Settings
@@ -19,6 +20,8 @@
 @import 'trumps/_all';
 // Pages
 @import 'pages/_all';
+// Pages
+@import 'posts/_all';
 
 html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);

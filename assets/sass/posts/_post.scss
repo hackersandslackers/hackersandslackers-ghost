@@ -1,3 +1,12 @@
+/*------------------------------------*\
+  Components > Post
+\*------------------------------------*/
+.c-post {
+  > * + * {
+    margin-top: $space-32;
+  }
+}
+
 .post-wrapper {
   position: relative;
   max-width: 850px;
@@ -17,14 +26,13 @@
       @include post-intro-notice;
     }
 
-
     p {
       @include paragraph;
     }
 
     li > code,
-      p > code {
-        @include inline-code;
-      }
+    p > code {
+      @include inline-code;
+    }
   }
 }

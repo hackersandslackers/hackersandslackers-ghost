@@ -1,8 +1,9 @@
 /*------------------------------------*\
   Components > Post Card
 \*------------------------------------*/
+@import 'post-card-mixins';
 
-.c-post-card {
+.post-card {
   display: flex;
   position: relative;
   flex-direction: column;
@@ -30,7 +31,13 @@
     left: 0;
     width: 100%;
     height: 100%;
+    -o-object-fit: cover;
     object-fit: cover;
+
+    &:hover {
+      opacity: .7;
+      cursor: pointer;
+    }
   }
 
   &__content {
@@ -43,23 +50,7 @@
   }
 
   &__title {
-    margin: 0;
-    padding: 0;
-    color: --header-color;
-    font-family: $header-font;
-    font-size: 1.9em;
-    font-weight: unset;
-    letter-spacing: -.3px;
-    line-height: 1.1;
-    transition: transition(all 1s, ease-out);
-
-    @include mq($from: tablet) {
-      font-size: $type--h-xs-lh;
-    }
-
-    @include mq($from: desktop) {
-      font-size: $type--h-sm;
-    }
+    @include title();
   }
 
   &__excerpt {
@@ -96,12 +87,6 @@
     color: var(--color-gray);
     white-space: nowrap;
 
-    @include attention() {
-      .c-post-card__author_name {
-        color: var(--color-text);
-      }
-    }
-
     &_name {
       font-weight: $type-600;
       transition: color $global-faster-transition;
@@ -132,17 +117,6 @@
   }
 
   .primary-tag {
-    padding: 6px;
-    border-radius: 3px;
-    color: white;
-    font-size: 1.1em;
-    font-weight: 600;
-    line-height: $type-single-line-height;
-    transition: 0.2s all ease-out;
-
-    &:hover {
-      background: white;
-      cursor: pointer;
-    }
+    @include primary-tag();
   }
 }

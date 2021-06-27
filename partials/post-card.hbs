@@ -1,10 +1,10 @@
-<div class='c-post-card js-post-card {{ post_class }}'>
+<div class='post-card js-post-card {{ post_class }}'>
   {{#if feature_image}}
-    <div class='c-post-card__media'>
-      <div class='c-post-card__image-wrap'>
+    <div class='post-card__media'>
+      <div class='post-card__image-wrap'>
         <img
           alt='{{ title }}'
-          class='c-post-card__image lazyload'
+          class='post-card__image lazyload'
           data-srcset='
             {{ img_url feature_image size='ml' }} 346w,
             {{ img_url feature_image size='lg' }} 692w,
@@ -16,30 +16,30 @@
     </div>
   {{/if}}
 
-  <div class='c-post-card__content'>
-    <h2 class='c-post-card__title'>
-      <a href='{{ url }}' class='c-post-card__url'>{{ title }}</a>
+  <div class='post-card__content'>
+    <h2 class='post-card__title'>
+      <a href='{{ url }}' class='post-card__url'>{{ title }}</a>
 
-      <!--<div class='c-post-card__visibility c-post-card__visibility--{{ visibility }}'>
+      <!--<div class='post-card__visibility post-card__visibility--{{ visibility }}'>
         <span class='paid'>{{t 'Paid' }}</span>
         <span class='members'>{{t 'Members' }}</span>
         <span class='public'>{{t 'Public' }}</span>
       </div>-->
     </h2>
 
-    <p class='c-post-card__excerpt'>{{ excerpt }}</p>
+    <p class='post-card__excerpt'>{{ excerpt }}</p>
 
-    <div class='c-post-card__meta'>
+    <div class='post-card__meta'>
       {{#primary_author}}
-        <a href='{{ url }}' class='c-post-card__author'>
+        <a href='{{ url }}' class='post-card__author'>
           {{#if profile_image}}
-            <div class='c-post-card__author_media'>
-              <img class='c-post-card__author_image lazyload' data-src='{{ img_url profile_image size='xs' }}' alt='{{ name }}' width='32' height='32'>
+            <div class='post-card__author_media'>
+              <img class='post-card__author_image lazyload' data-src='{{ img_url profile_image size='xs' }}' alt='{{ name }}' width='32' height='32'>
             </div>
           {{/if}}
-          <div class='c-post-card__author_info'>
-            <div class='c-post-card__author_name'>{{ name }}</div>{{/primary_author}}
-            <time class='c-post-card__date' datetime='{{ date format='YYYY-MM-DD' }}' title='{{ date format='DD MMMM YYYY' }}'>{{ date format='DD MMM YYYY' }}</time>
+          <div class='post-card__author_info'>
+            <div class='post-card__author_name'>{{ name }}</div>{{/primary_author}}
+            <time class='post-card__date' datetime='{{ date format='YYYY-MM-DD' }}' title='{{ date format='DD MMMM YYYY' }}'>{{ date format='DD MMM YYYY' }}</time>
           </div>
         </a>
 
