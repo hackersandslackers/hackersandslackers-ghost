@@ -161,3 +161,11 @@ $(document).ready(function() {
     });
   });
 });
+
+// =====================
+// Facebook -> Github
+// =====================
+
+$(".github-link").each(function() {
+  this.attr('href').replaceAll("https://www.facebook.com/", "")
+})
