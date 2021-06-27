@@ -1,29 +1,68 @@
 /*------------------------------------*\
   Components > Social Icons / Footer
 \*------------------------------------*/
-.sidebar-widget-social {
+.sidebar-social-widget {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 15px;
-  border: 0.5px solid var(--color-border);
-  border-radius: $global-border-radius;
-  background-color: var(--bg-white);
+  background-color: white;
 
-  &__item {
-    width: $space-40;
-    height: $space-40;
+  svg {
+    color: #a1adc6;
   }
 
-  .social-link {
-    fill: var(--color-gray);
-    display: block;
-    align-items: center;
-    justify-content: space-between;
-    width: $space-40;
-    height: $space-40;
-    transition: fill $global-transition;
-    @include attention() {
-      fill: var(--color-text);
+  button {
+    -webkit-appearance: none !important;
+    padding: unset;
+    border: unset !important;
+    outline: none !important;
+    background: unset !important;
+    color: #a1adc6;
+    font-size: 1.8em;
+    transition: $transition;
+    @media(max-width: 1000px) {
+      font-size: 1.7em;
+    }
+
+    &:hover {
+      -webkit-transform: scale(1.2);
+      transform: scale(1.2);
+      cursor: pointer !important;
+
+      &.medium svg,
+      &.medium {
+        color: lighten($medium-color, 10%) !important;
+      }
+
+      &.facebook svg {
+        color: lighten($facebook-color, 20%) !important;
+      }
+
+      &.twitter svg {
+        color: lighten($twitter-color, 10%);
+      }
+
+      &.angellist,
+      &.github svg {
+        color: lighten($github-color, 10%) !important;
+      }
+
+      &.rss svg {
+        color: lighten($rss-color, 20%) !important;
+      }
+
+      &.feedly svg {
+        color: #60d293 !important;
+      }
+
+      &.pocket svg {
+        color: lighten(#f14861, 10%) !important;
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
     }
   }
 }

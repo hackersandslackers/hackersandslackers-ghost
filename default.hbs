@@ -1,21 +1,19 @@
 <!doctype html>
 <html lang='{{ @site.locale }}'>
 
-{{> head }}
+  {{> head }}
 
-<body class='{{ body_class }}'>
-  {{> sprites}}
-  <div class='c-site-container'>
-    {{> header }}
+  <body class='{{ body_class }}'>
+    {{> sprites}}
 
-    {{> tags-list }}
+      <div class='c-site-container'>
+        {{> header }}
+        {{> tags-list }}
+        {{> layout }}
+        {{> footer }}
+      </div>
 
-    {{> layout }}
-
-    {{> footer }}
-  </div>
-
-  <script src='{{ asset 'js/app.min.js' }}'></script>
-  {{ ghost_foot }}
-</body>
+    <script src='{{ asset 'js/app.min.js' }}'></script>
+    {{ ghost_foot }}
+  </body>
 </html>

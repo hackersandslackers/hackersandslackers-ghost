@@ -16,6 +16,7 @@
     @content;
   }
 }
+
 @mixin link() {
   border-bottom: 1px solid $theme-color;
   color: $body-color;
@@ -26,6 +27,7 @@
     color: $theme-color !important;
   }
 }
+
 @mixin figcaption() {
   @include fill-available();
   margin: 0 auto;
@@ -45,11 +47,13 @@
     white-space: nowrap;
   }
 }
+
 @mixin link() {
   a {
     color: #737883;
   }
 }
+
 @mixin mobile-full-width() {
   min-width: 100%;
   margin-right: calc("-50vw + 50%") !important;
@@ -57,6 +61,7 @@
   border-right: 0;
   border-left: 0;
 }
+
 @mixin mobile-horizontal-scroll() {
   -webkit-overflow-scrolling: touch;
   overflow-x: scroll;
@@ -73,9 +78,11 @@
     background: transparent;
   }
 }
+
 @mixin mobile-horizontal-scroll-child() {
   display: inline;
 }
+
 @mixin figcaption {
   @include fill-available();
   margin: 0 auto;
@@ -100,6 +107,7 @@
     color: #737883;
   }
 }
+
 @mixin code-figcaption {
   order: 1;
   @include fill-available();
@@ -123,6 +131,7 @@
     white-space: nowrap;
   }
 }
+
 @mixin inline-code {
   display: inline;
   padding: 2px 4px;
@@ -204,16 +213,16 @@
 }
 
 @mixin post-tag-footer {
-    display: inline-block;
-    margin-right: 10px;
-    padding: 9px 10px 7px;
-    border-radius: 3px;
-    background: hsla(0,0%,93.3%,.7);
-    color: #6b7583!important;
-    font-family: $body-font-medium;
-    font-size: .85em;
-    line-height: 1;
-    transition: all .2s ease-out;
+  display: inline-block;
+  margin-right: 10px;
+  padding: 9px 10px 7px;
+  border-radius: 3px;
+  background: hsla(0, 0%, 93.3%, .7);
+  color: #6b7583 !important;
+  font-family: $body-font-medium;
+  font-size: .85em;
+  line-height: 1;
+  transition: all .2s ease-out;
 }
 
 @mixin fill-available {
@@ -221,4 +230,54 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+}
+
+@mixin social-icons() {
+  -webkit-appearance: none;
+  padding: unset;
+  border: unset;
+  outline: none;
+  background: unset;
+  color: #a1adc6;
+  font-size: 1.8em;
+  transition: $transition;
+  @media(max-width: 1000px) {
+    font-size: 1.7em;
+  }
+
+  &:hover {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    cursor: pointer !important;
+
+    &.medium svg,
+    &.medium {
+      color: lighten($medium-color, 10%) !important;
+    }
+
+    &.facebook svg {
+      color: lighten($facebook-color, 20%) !important;
+    }
+
+    &.twitter svg {
+      color: lighten($twitter-color, 10%);
+    }
+
+    &.angellist,
+    &.github svg {
+      color: lighten($github-color, 10%) !important;
+    }
+
+    &.rss svg {
+      color: lighten($rss-color, 20%) !important;
+    }
+
+    &.feedly svg {
+      color: #60d293 !important;
+    }
+
+    &.pocket svg {
+      color: lighten(#f14861, 10%) !important;
+    }
+  }
 }

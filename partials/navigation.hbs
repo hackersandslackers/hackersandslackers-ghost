@@ -1,10 +1,26 @@
-{{#foreach navigation}}
-  <li class='c-nav__item'>
-    <a
-      href='{{ url absolute='true' }}'
-      class='main-nav-link {{#if current}} c-nav__link--current {{/if}}'
-    >
-    {{ label }}
-  </a>
-  </li>
-{{/foreach}}
+{{#if isSecondary}}
+  <div class=sidebar-social-widget">
+      {{#foreach navigation}}
+        <li class="nav-{{slug}}">
+          <a href="{{url}}" class="social-link">
+            <svg width="32" height="32" role="img" aria-label="{{slug}} icon">
+              <use xlink:href="#{{slug}}"></use>
+            </svg>
+          </a>
+        </li>
+      {{/foreach}}
+  </div>
+{{else}}
+  {{#foreach navigation}}
+      <li class='c-nav__item'>
+        <a
+                href='{{ url absolute='true' }}'
+                class='main-nav-link {{#if current}} c-nav__link--current {{/if}}'
+        >
+          {{ label }}
+        </a>
+      </li>
+  {{/foreach}}
+{{/if}}
+
+
