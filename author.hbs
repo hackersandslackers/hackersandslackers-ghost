@@ -48,6 +48,7 @@
                     </svg>
                   </use>
                 </svg>
+                <div class="author-meta-text">Github</div>
               </div>
             </a>
           </li>
@@ -66,7 +67,7 @@
                     </svg>
                   </use>
                 </svg>
-                <span>{{ website }}</span>
+                <div class="author-meta-text">{{ website }}</div>
               </div>
             </a>
           </li>
@@ -84,7 +85,7 @@
                 </use>
               </svg>
             </div>
-            {{ location }}
+            <div class="author-meta-text">{{ location }}</div>
           </li>
         {{/if}}
 
@@ -101,7 +102,7 @@
               </use>
             </svg>
           </div>
-          {{plural ../pagination.total empty='No Posts' singular='% Post' plural='% Posts'}}
+          <div class="author-meta-text">{{plural ../pagination.total empty='No Posts' singular='% Post' plural='% Posts'}}</div>
         </li>
       </ul>
     </div>
