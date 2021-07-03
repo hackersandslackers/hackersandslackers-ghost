@@ -8,7 +8,7 @@
   {{> compiled/inline-css }}
 
   <script>
-    var site_url                            = '{{ @site.url }}',
+    let site_url                            = '{{ @site.url }}',
         pagination_next_page_number         = '{{ pagination.next }}',
         pagination_available_pages_number   = '{{ pagination.pages }}',
         pagination_loading_text             = '{{t "Loading" }}',

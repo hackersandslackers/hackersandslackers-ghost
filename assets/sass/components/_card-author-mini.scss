@@ -5,11 +5,7 @@
 .card-author-mini {
   display: flex;
   width: 100%;
-  padding: $space-24;
-  border: .5px solid var(--color-border);
   border-radius: $global-border-radius;
-  background-color: var(--bg-white);
-  box-shadow: $global-shadow;
 
   &:not(:last-child) {
     margin-bottom: $space-24;

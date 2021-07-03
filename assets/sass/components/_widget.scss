@@ -4,5 +4,8 @@
 
 .widget {
   overflow: hidden;
-  margin-bottom: $space-32;
+  margin-bottom: $space-24;
+  box-shadow: 0 1px 4px rgb(39 44 49 / 15%);
+  padding: 20px;
+  background: white;
 }

@@ -3,10 +3,11 @@
 \*------------------------------------*/
 .footer {
   justify-content: space-around;
-  margin-top: $space-40;
   padding: $space-40 0;
   border-top: 0.5px solid var(--color-border);
   background-color: var(--bg-white);
+  max-width: 1000px;
+  margin: $space-40 auto 0;
 
   .o-grid {
     justify-content: space-between;

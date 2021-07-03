@@ -20,7 +20,7 @@
       fs           = require('fs');
 
   // Set the compiler to use Dart Sass instead of Node Sass
-  sass.compiler = require('dart-sass');
+  sass.compiler = require('sass');
 
   var onError = function( err ) {
     console.log('An error occurred:', gutil.colors.magenta(err.message));

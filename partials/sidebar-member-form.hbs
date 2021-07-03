@@ -1,0 +1,8 @@
+{{#unless @member}}
+  <div class='widget newsletter'>
+    <div class='title-bar'>
+      <h3 class='title-bar__title'>{{t 'Newsletter'}}</h3>
+    </div>
+    {{> subscribe-form inputLabel='subscribe-email-sidebar'}}
+  </div>
+{{/unless}}

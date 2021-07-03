@@ -48,7 +48,7 @@
           {{#get 'authors' limit='8' order="posts.count desc"}}
             {{#foreach authors}}
               <li>
-                <a href="/authors/{{slug}}" title="{{name}}" class="author author-{{slug}} {{slug}}" >
+                <a href="/authors/{{slug}}" title="{{name}}" class="author-{{slug}} {{slug}}" >
                   {{name}}
                 </a>
               </li>
@@ -57,13 +57,6 @@
         </ul>
       </div>
     {{/if}}
-
-    {{#unless @member}}
-      <div class='footer-section newsletter'>
-        <h4 class='footer-title'>{{t 'Newsletter' }}</h4>
-        {{> subscribe-form inputLabel='subscribe-email-footer'}}
-      </div>
-    {{/unless}}
 
   </div>
 

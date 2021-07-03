@@ -34,7 +34,7 @@
     "gulp-sass": "^5.0.0",
     "gulp-size": "^4.0.1",
     "gulp-uglify": "^3.0.2",
-    "gulp-util": "^3.0.7",
+    "gulp-util": "^3.0.8",
     "jshint": "^2.13.0",
     "jshint-stylish": "^2.2.1",
     "lazyload": "^2.0.0-rc.2",
@@ -42,13 +42,12 @@
     "lunr": "^2.3.9",
     "lunr-languages": "^1.8.0",
     "normalize.css": "^8.0.1",
-    "prismjs": "^1.23.0",
+    "prismjs": "^1.24.1",
     "run-sequence": "^2.2.1",
-    "sass": "^1.35.1",
     "sass-mq": "^5.0.1"
   },
   "devDependencies": {
-    "dart-sass": "^1.25.0",
+    "sass": "^1.35.1",
     "gulp": "^4.0.2",
     "gulp-rtlcss": "^1.4.2",
     "gulp-zip": "^5.1.0"
