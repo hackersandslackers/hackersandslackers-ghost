@@ -1,7 +1,7 @@
-<header class='c-post-header'>
+<header class='post-header'>
   {{#if feature_image}}
-    <figure class='c-post-image-wrap'>
-      <img alt='' class='c-post-image lazyload' data-srcset='
+    <figure class='post-image-wrap'>
+      <img alt='' class='post-image lazyload' data-srcset='
         {{ img_url feature_image size='ml' }} 346w,
         {{ img_url feature_image size='lg' }} 692w,
         {{ img_url feature_image size='xl' }} 1384w' sizes='(min-width: 1260px) 692px, (min-width: 1040px) calc(34vw + 270px), (min-width: 640px) calc(90vw - 61px), calc(100vw - 32px)' data-src='{{ img_url feature_image size='xl' }}'>
@@ -11,17 +11,17 @@
   <h1 class='post-title'>{{ title }}</h1>
 
   {{#if custom_excerpt}}
-    <p class='c-post-header__excerpt'>{{ custom_excerpt }}</p>
+    <p class='post-header__excerpt'>{{ custom_excerpt }}</p>
   {{/if}}
 
   {{#is 'post'}}
-    <div class='c-post-header__meta'>
+    <div class='post-header__meta'>
       {{#primary_author}}
-        <a href='{{ url }}' class='c-post-header__author'>
+        <a href='{{ url }}' class='post-header__author'>
           {{#if profile_image}}
-            <div class='c-post-header__author_media'>
+            <div class='post-header__author_media'>
               <img
-                      class='c-post-header__author_image lazyload'
+                      class='post-header__author_image lazyload'
                       data-src='{{ img_url profile_image size='xs' }}'
                       alt='{{ name }}'
                       width='32'
@@ -29,13 +29,13 @@
               />
             </div>
           {{/if}}
-          <div class='c-post-header__author_info'>
-            <div class='c-post-header__author_name'>
+          <div class='post-header__author_info'>
+            <div class='post-header__author_name'>
               {{ name }}
             </div>
       {{/primary_author}}
       <time
-              class='c-post-header__date'
+              class='post-header__date'
               datetime='{{ date format='YYYY-MM-DD' }}'
               title='{{ date format='DD MMMM YYYY' }}'>
         {{ date format='DD MMM YYYY' }}

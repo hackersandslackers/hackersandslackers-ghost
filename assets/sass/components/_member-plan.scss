@@ -3,24 +3,24 @@
 \*------------------------------------*/
 
 @include mq($from: desktop) {
-  .c-member-plans {
+  .member-plans {
     display: flex;
     align-items: stretch;
     justify-content: center;
   }
 
-  .c-member-plan {
+  .member-plan {
     flex: 1 1 auto;
     display: flex;
     flex-direction: column;
   }
 
-  .c-member-plan + .c-member-plan {
+  .member-plan + .member-plan {
     margin-left: $space-40;
   }
 }
 
-.c-member-plan {
+.member-plan {
   padding: $space-32;
   margin-bottom: $space-32;
   background-color: var(--bg-white);

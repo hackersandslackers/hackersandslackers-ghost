@@ -2,7 +2,7 @@
   Components > Alerts
 \*------------------------------------*/
 
-.c-alert {
+.alert {
   font-weight: $type-500;
   font-size: $type-xs;
   line-height: $type-xs-lh;
@@ -17,14 +17,14 @@
   }
 }
 
-.c-alert--success {
+.alert--success {
   color: var(--color-success);
 }
 
-.c-alert--invalid {
+.alert--invalid {
   color: var(--color-error);
 }
 
-.c-alert--error {
+.alert--error {
   color: var(--color-error);
 }

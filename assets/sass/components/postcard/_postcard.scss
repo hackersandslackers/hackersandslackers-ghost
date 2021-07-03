@@ -42,6 +42,7 @@
 
   &__content {
     flex-grow: 1;
+    margin-top: 0 !important;
     padding: $space-24;
 
     @include mq($from: desktop) {

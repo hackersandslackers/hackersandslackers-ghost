@@ -31,15 +31,15 @@ $(document).ready(function() {
 
   $('.js-nav-toggle').click(function(e) {
     e.preventDefault();
-    $('.c-nav-wrap').toggleClass('is-active');
-    $(this).toggleClass('c-nav-toggle--close');
+    $('.nav-wrap').toggleClass('is-active');
+    $(this).toggleClass('nav-toggle--close');
   });
 
   // =====================
   // Responsive videos
   // =====================
 
-  $('.c-content').fitVids({
+  $('.content').fitVids({
     'customSelector': [ 'iframe[src*="ted.com"]'          ,
                         'iframe[src*="player.twitch.tv"]' ,
                         'iframe[src*="dailymotion.com"]'  ,
@@ -51,10 +51,10 @@ $(document).ready(function() {
   // Images zoom
   // =====================
 
-  $('.c-content img').attr('data-action', 'zoom');
+  $('.content img').attr('data-action', 'zoom');
 
   // If the image is inside a link, remove zoom
-  $('.c-content a img').removeAttr('data-action');
+  $('.content a img').removeAttr('data-action');
 
   // =====================
   // Clipboard URL Copy
@@ -78,18 +78,18 @@ $(document).ready(function() {
   // Search
   // =====================
 
-  var search_field = $('.js-search-input'),
+  let search_field = $('.js-search-input'),
       search_results = $('.js-search-results'),
       toggle_search = $('.js-search-toggle'),
       search_result_template = "\
-      <a href={{link}} class='c-search-result'>\
-        <div class='c-search-result__content'>\
-          <h3 class='c-search-result__title'>{{title}}</h3>\
-          <p class='c-search-result__excerpt'>{{excerpt}}</p>\
-          <time class='c-search-result__date'>{{pubDate}}</time>\
+      <a href={{link}} class='search-result'>\
+        <div class='search-result__content'>\
+          <h3 class='search-result__title'>{{title}}</h3>\
+          <p class='search-result__excerpt'>{{excerpt}}</p>\
+          <time class='search-result__date'>{{pubDate}}</time>\
         </div>\
-        <div class='c-search-result__media'>\
-          <div class='c-search-result__image is-inview' style='background-image: url({{featureImage}})'></div>\
+        <div class='search-result__media'>\
+          <div class='search-result__image is-inview' style='background-image: url({{featureImage}})'></div>\
         </div>\
       </a>";
 
@@ -105,9 +105,9 @@ $(document).ready(function() {
     }, 500);
   });
 
-  $('.c-search, .js-search-close, .js-search-close .icon').on('click keyup', function(event) {
-    if (event.target == this || event.target.className == 'js-search-close' || event.target.className == 'icon' || event.keyCode == 27) {
-      $('.c-search').removeClass('is-active');
+  $('.search, .js-search-close, .js-search-close .icon').on('click keyup', function(event) {
+    if (event.target === this || event.target.className === 'js-search-close' || event.target.className === 'icon' || event.keyCode === 27) {
+      $('.search').removeClass('is-active');
     }
   });
 
@@ -126,13 +126,13 @@ $(document).ready(function() {
   // Ajax Load More
   // =====================
 
-  var pagination_next_url = $('link[rel=next]').attr('href'),
+  let pagination_next_url = $('link[rel=next]').attr('href'),
     $load_posts_button = $('.js-load-posts');
 
   $load_posts_button.click(function(e) {
     e.preventDefault();
 
-    var request_next_link =
+    let request_next_link =
       pagination_next_url.split(/page/)[0] +
       'page/' +
       pagination_next_page_number +
@@ -142,21 +142,21 @@ $(document).ready(function() {
       url: request_next_link,
       beforeSend: function() {
         $load_posts_button.text(decoding_translation_chars(pagination_loading_text));
-        $load_posts_button.addClass('c-btn--loading');
+        $load_posts_button.addClass('btn--loading');
       }
     }).done(function(data) {
-      var posts = $('.js-post-card', data);
+      let posts = $('.js-post-card', data);
 
       $('.js-grid').append(posts);
 
       $load_posts_button.text(decoding_translation_chars(pagination_more_posts_text));
-      $load_posts_button.removeClass('c-btn--loading');
+      $load_posts_button.removeClass('btn--loading');
 
       pagination_next_page_number++;
 
       // If you are on the last pagination page, hide the load more button
       if (pagination_next_page_number > pagination_available_pages_number) {
-        $load_posts_button.addClass('c-btn--disabled').attr('disabled', true);
+        $load_posts_button.addClass('btn--disabled').attr('disabled', true);
       }
     });
   });

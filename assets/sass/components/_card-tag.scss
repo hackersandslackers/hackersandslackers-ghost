@@ -2,7 +2,7 @@
   Components > Tag Card
 \*------------------------------------*/
 
-.c-tag-card {
+.tag-card {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -79,7 +79,7 @@
   }
 
   @include attention() {
-    .c-tag-card__url {
+    .tag-card__url {
       text-decoration: underline;
     }
   }

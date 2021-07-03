@@ -2,7 +2,7 @@
   Components > Author
 \*------------------------------------*/
 
-.c-author {
+.author {
   display: flex;
   background: white;
   flex-direction: column;
@@ -52,7 +52,7 @@
   }
 }
 
-.c-author__links {
+.author__links {
   display: flex;
   justify-content: center;
   margin-top: half($space-16);

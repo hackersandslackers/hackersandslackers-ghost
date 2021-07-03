@@ -1,6 +1,6 @@
-<div class='c-widget'>
-  <div class='c-title-bar'>
-    <h3 class='c-title-bar__title'><a href='{{ @site.url }}/authors/' class='c-title-bar__link'>{{t 'Authors'}} →</a></h3>
+<div class='widget'>
+  <div class='title-bar'>
+    <h3 class='title-bar__title'><a href='{{ @site.url }}/authors/' class='title-bar__link'>{{t 'Authors'}} →</a></h3>
   </div>
 
   {{#get 'authors' limit='3' include='count.posts' order='count.posts desc'}}

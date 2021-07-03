@@ -1,8 +1,8 @@
 {
-  "name": "krabi",
-  "description": "Premium Ghost Theme",
+  "name": "Hackers and Slackers",
+  "description": "Custom Ghost Theme",
   "authors": [
-    "Aspire Themes"
+    "Todd Birchard"
   ],
   "dependencies": {
     "jquery.fitvids": "fitvids#^1.1.0",

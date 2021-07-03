@@ -1,15 +1,15 @@
-<div class='c-tags-list-container'>
+<div class='tags-list-container'>
   <div class='o-grid'>
     <div class='o-grid__col o-grid__col--full'>
       {{#get 'tags' limit='all'}}
-        <div class='c-tags-list-wrap'>
-          <ul class='c-tags-list o-plain-list dragscroll'>
-            <li class='c-tags-list__item'>
-              <a href='/' class='c-tags-list__link'>{{t 'Latest' }}</a>
+        <div class='tags-list-wrap'>
+          <ul class='tags-list o-plain-list dragscroll'>
+            <li class='tags-list__item'>
+              <a href='/' class='tags-list__link'>{{t 'Latest' }}</a>
             </li>
             {{#foreach tags}}
-              <li class='c-tags-list__item'>
-                <a href='{{ url }}' class='c-tags-list__link'>{{ name }}</a>
+              <li class='tags-list__item'>
+                <a href='{{ url }}' class='tags-list__link'>{{ name }}</a>
               </li>
             {{/foreach}}
           </ul>
@@ -27,7 +27,7 @@
     document.querySelectorAll('.c-tags-list__link').forEach(function(index) {
       var current_tag_item = index;
       if (url_pathname === current_tag_item.getAttribute('href')) {
-        current_tag_item.className += ' ' + 'c-tags-list__link--current';
+        current_tag_item.className += ' ' + 'tags-list__link--current';
       }
     });
   });

@@ -1,7 +1,7 @@
 /*------------------------------------*\
   Components > Subscribe Form
 \*------------------------------------*/
-.c-subscribe {
+.subscribe {
   padding: $space-32 $space-24 $space-40;
   border-radius: $global-border-radius;
   background-color: var(--color-text);
@@ -25,35 +25,35 @@
   }
 }
 
-.c-subscribe-form {
-  .c-alert {
+.subscribe-form {
+  .alert {
     display: none;
   }
 
-  .c-btn {
+  .btn {
     width: 100%;
     line-height: $type-md-lh;
-    @extend .c-btn--loading;
+    @extend .btn--loading;
 
     &:after {
       display: none;
     }
   }
 
-  &.loading .c-btn {
+  &.loading .btn {
     &:after {
       display: block;
     }
   }
 
-  &.error .c-alert--error,
-  &.invalid .c-alert--invalid,
-  &.success .c-alert--success {
+  &.error .alert--error,
+  &.invalid .alert--invalid,
+  &.success .alert--success {
     display: block;
   }
 }
 @include mq($from: tablet) {
-  .c-subscribe-form--compact {
+  .subscribe-form--compact {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -62,14 +62,14 @@
       display: flex;
     }
 
-    .c-btn {
+    .btn {
       flex: 3;
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;
       line-height: initial;
     }
 
-    .c-subscribe-form__input[type=email] {
+    .subscribe-form__input[type=email] {
       margin: 0;
       border-top-right-radius: 0;
       border-bottom-right-radius: 0;

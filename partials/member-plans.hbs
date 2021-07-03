@@ -1,52 +1,52 @@
-<div class='c-member-plans'>
+<div class=widgetmember-plans'>
   {{#unless @member}}
-    <div class='c-member-plan c-member-plan--free'>
-      <header class='c-member-plan__header'>
-        <h2 class='c-member-plan__title'>{{t 'Free'}}</h2>
-        <strong class='c-member-plan__amount'>0</strong>
+    <div class='member-plan member-plan--free'>
+      <header class='member-plan__header'>
+        <h2 class='member-plan__title'>{{t 'Free'}}</h2>
+        <strong class='member-plan__amount'>0</strong>
       </header>
-      <div class='c-member-plan__content'>
-        <ul class='c-member-plan__list'>
+      <div class='member-plan__content'>
+        <ul class='member-plan__list'>
           <li>Regular updates with new content</li>
           <li>Support independent publishing</li>
         </ul>
-        <a class='c-btn c-btn--action' href='{{ @site.url }}/signup/'>{{t 'Choose this plan'}}</a>
+        <a class='btn btn--action' href='{{ @site.url }}/signup/'>{{t 'Choose this plan'}}</a>
       </div>
     </div>
   {{/unless}}
 
-  <div class='c-member-plan c-member-plan--premium'>
-    <header class='c-member-plan__header'>
-      <h2 class='c-member-plan__title'>{{t 'Monthly'}}</h2>
-      <span class='c-member-plan__sign'>{{ price currency=@price.currency }}</span>
-      <strong class='c-member-plan__amount'>{{ @price.monthly }}</strong>
+  <div class='member-plan member-plan--premium'>
+    <header class='member-plan__header'>
+      <h2 class='member-plan__title'>{{t 'Monthly'}}</h2>
+      <span class='member-plan__sign'>{{ price currency=@price.currency }}</span>
+      <strong class='member-plan__amount'>{{ @price.monthly }}</strong>
     </header>
-    <div class='c-member-plan__content'>
-      <ul class='c-member-plan__list'>
+    <div class='member-plan__content'>
+      <ul class='member-plan__list'>
         <li>Full access to all private posts</li>
         <li>Regular updates with new content</li>
         <li>Support independent publishing</li>
         <li>Simple, secure card payment</li>
       </ul>
-      <a class='c-btn c-btn--dark' href='javascript:void(0)' data-members-plan='Monthly'>{{t 'Choose this plan'}}</a>
+      <a class='btn btn--dark' href='javascript:void(0)' data-members-plan='Monthly'>{{t 'Choose this plan'}}</a>
     </div>
   </div>
 
-  <div class='c-member-plan c-member-plan--premium'>
-    <header class='c-member-plan__header'>
-      <h2 class='c-member-plan__title'>{{t 'Yearly'}}</h2>
-      <span class='c-member-plan__sign'>{{ price currency=@price.currency }}</span>
-      <strong class='c-member-plan__amount'>{{ @price.yearly }}</strong>
+  <div class='member-plan member-plan--premium'>
+    <header class='member-plan__header'>
+      <h2 class='member-plan__title'>{{t 'Yearly'}}</h2>
+      <span class='member-plan__sign'>{{ price currency=@price.currency }}</span>
+      <strong class='member-plan__amount'>{{ @price.yearly }}</strong>
     </header>
-    <div class='c-member-plan__content'>
-      <ul class='c-member-plan__list'>
+    <div class='member-plan__content'>
+      <ul class='member-plan__list'>
         <li>Full access to all private posts</li>
         <li>Regular updates with new content</li>
         <li>Support independent publishing</li>
         <li>Simple, secure card payment</li>
         <li>One easy payment instead of 12!</li>
       </ul>
-      <a class='c-btn c-btn--dark' href='javascript:void(0)' data-members-plan='Yearly'>{{t 'Choose this plan'}}</a>
+      <a class='btn btn--dark' href='javascript:void(0)' data-members-plan='Yearly'>{{t 'Choose this plan'}}</a>
     </div>
   </div>
 </div>

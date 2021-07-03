@@ -2,13 +2,13 @@
   Components > Tags List
 \*------------------------------------*/
 
-.c-tags-list-container {
+.tags-list-container {
   margin-bottom: $space-32;
   background-color: var(--bg-white);
   box-shadow: $global-shadow;
 }
 
-.c-tags-list-wrap {
+.tags-list-wrap {
   position: relative;
 
   &:after {
@@ -23,7 +23,7 @@
   }
 }
 
-.c-tags-list {
+.tags-list {
   -ms-overflow-style: none;  // Edge
   scrollbar-width: none;     // Firefox
   display: flex;

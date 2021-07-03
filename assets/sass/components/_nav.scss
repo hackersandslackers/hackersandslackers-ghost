@@ -2,7 +2,7 @@
   Components > Site Navigation
 \*------------------------------------*/
 
-.c-nav-wrap {
+.nav-wrap {
   @include mq($until: desktop) {
     display: flex;
     visibility: hidden;
@@ -30,7 +30,6 @@
   }
 
   @include mq($from: desktop) {
-    display: block;
     display: flex;
     flex: 2;
     align-items: center;
@@ -38,7 +37,7 @@
   }
 }
 
-.c-nav {
+.nav {
   @include mq($until: desktop) {
     width: 100%;
     padding-right: $space-32;
@@ -113,7 +112,7 @@
   }
 }
 
-.c-nav-toggle {
+.nav-toggle {
   z-index: 10;
   position: absolute;
   top: 50%;
@@ -146,7 +145,7 @@
     &:before { transform: translateY(16px) }
     &:after { transform: translateY(7px); }
 
-    .c-nav-toggle--close & {
+    .nav-toggle--close & {
       height: 2px;
       background-color: transparent;
 

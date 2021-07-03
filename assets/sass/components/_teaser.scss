@@ -2,7 +2,7 @@
   Components > Teaser
 \*------------------------------------*/
 
-.c-teaser {
+.teaser {
   display: flex;
   align-items: center;
   padding: $space-24;
@@ -52,7 +52,7 @@
   @include attention() {
     color: var(--color-text);
 
-    .c-teaser__title {
+    .teaser__title {
       color: var(--color-text);
       text-decoration: underline;
     }

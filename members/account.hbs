@@ -2,13 +2,13 @@
 
 <div class='o-grid__col o-grid__col--center o-grid__col--4-4-s o-grid__col--3-4-m o-grid__col--2-3-l'>
   {{#if @member.paid}}
-    <div class='c-archive'>
-      <h1 class='c-archive__title'>{{t "Nice, you're a subscriber!"}}</h1>
+    <div class='archive'>
+      <h1 class='archive__title'>{{t "Nice, you're a subscriber!"}}</h1>
       {{#foreach @member.subscriptions}}
         {{#if cancel_at_period_end}}
-          <p class='c-archive__description u-color-error'>{{t "Your subscription will expire on" }} <span class='u-type-600'>{{ date current_period_end format="DD MMM YYYY" }}.</span></p>
+          <p class='archive__description u-color-error'>{{t "Your subscription will expire on" }} <span class='u-type-600'>{{ date current_period_end format="DD MMM YYYY" }}.</span></p>
         {{else}}
-          <p class='c-archive__description'>{{t "You have an active {siteTitle} account with access to all posts." siteTitle=@site.title}}</p>
+          <p class='archive__description'>{{t "You have an active {siteTitle} account with access to all posts." siteTitle=@site.title}}</p>
         {{/if}}
       {{/foreach}}
     </div>
@@ -48,7 +48,7 @@
 
       <div class='o-grid'>
         <div class='o-grid__col o-grid__col--4-4-s o-grid__col--2-4-m o-grid__col--2-4-l u-mb-16'>
-          <a class='c-btn c-btn--full c-btn--outline' href='javascript:'
+          <a class='btn c-btn--full c-btn--outline' href='javascript:'
                 data-members-edit-billing
                 data-members-success='/account/?stripe=billing-update-success'
                 data-members-cancel='/account/?stripe=billing-update-cancel'>{{t 'Edit billing info'}}</a>
@@ -56,13 +56,13 @@
         <div class='o-grid__col o-grid__col--4-4-s o-grid__col--2-4-m o-grid__col--2-4-l'>
           {{#if cancel_at_period_end}}
             {{cancel_link
-              class='c-btn c-btn--full c-btn--action'
-              errorClass='c-alert c-alert--error u-mt-16 u-block'
+              class='btn c-btn--full c-btn--action'
+              errorClass='alert c-alert--error u-mt-16 u-block'
             }}
           {{else}}
             {{cancel_link
-              class='c-btn c-btn--full c-btn--danger'
-              errorClass='c-alert c-alert--error u-mt-16 u-block'
+              class='btn c-btn--full c-btn--danger'
+              errorClass='alert c-alert--error u-mt-16 u-block'
             }}
           {{/if}}
         </div>
@@ -70,10 +70,10 @@
     {{/foreach}}
 
   {{else if @member}}
-    <div class='c-archive'>
-      <h1 class='c-archive__title'>{{t "You're a subscriber to free members updates"}}</h1>
-      <p class='c-archive__description'>{{t "You are subscribed to free updates from {siteTitle}, but don't have a paid subscription to read all the posts." siteTitle=@site.title}}</p>
-      <p><a class='c-btn c-btn--action u-mt-16' href='{{ @site.url }}/subscribe/'>{{t 'Subscribe Now'}}</a></p>
+    <div class='archive'>
+      <h1 class='archive__title'>{{t "You're a subscriber to free members updates"}}</h1>
+      <p class='archive__description'>{{t "You are subscribed to free updates from {siteTitle}, but don't have a paid subscription to read all the posts." siteTitle=@site.title}}</p>
+      <p><a class='btn c-btn--action u-mt-16' href='{{ @site.url }}/subscribe/'>{{t 'Subscribe Now'}}</a></p>
     </div>
 
   {{else}}

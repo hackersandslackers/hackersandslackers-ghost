@@ -1,4 +1,4 @@
-<footer class='c-footer'>
+<footer class='footer'>
   <div class='o-grid'>
 
     {{#if @site.description }}
@@ -8,7 +8,7 @@
             <img class='footer-logo' src='{{ @site.logo }}' alt='{{ @site.title }}' />
           </a>
         {{else}}
-          <a class='c-logo__link' href='{{ @site.url }}'>{{ @site.title }}</a>
+          <a class='logo__link' href='{{ @site.url }}'>{{ @site.title }}</a>
         {{/if}}
         <p class='footer-description'>{{ @site.description }}</p>
       </div>
@@ -17,7 +17,7 @@
     {{#if @site.navigation}}
       <div class='footer-section'>
         <h4 class='footer-title'>{{t 'Navigation' }}</h4>
-        <ul class='c-footer-list o-plain-list'>
+        <ul class='footer-list o-plain-list'>
           {{ navigation }}
         </ul>
       </div>
@@ -26,7 +26,7 @@
     {{#if 'tags'}}
       <div class='footer-section'>
         <h4 class='footer-title'>{{t "Series'" }}</h4>
-          <ul class='c-footer-list o-plain-list tags_list'>
+          <ul class='footer-list o-plain-list tags_list'>
             {{#get "tags"
               limit="60"
               include="count.posts"
@@ -44,7 +44,7 @@
     {{#if 'authors'}}
       <div class='footer-section'>
         <h4 class='footer-title'>{{t 'Authors' }}</h4>
-        <ul class='c-footer-list o-plain-list'>
+        <ul class='footer-list o-plain-list'>
           {{#get 'authors' limit='8' order="posts.count desc"}}
             {{#foreach authors}}
               <li>
@@ -68,7 +68,7 @@
   </div>
 
   <div>
-    <div class='u-type-xs c-footer__copyright'>
+    <div class='u-type-xs footer__copyright'>
       &copy; {{ date format='YYYY' }} {{ @site.title }}
     </div>
   </div>

@@ -2,7 +2,7 @@
   Components > Search
 \*------------------------------------*/
 
-.c-search {
+.search {
   position: fixed;
   top: 0;
   right: 0;
@@ -95,7 +95,7 @@
   }
 }
 
-.c-search-results {
+.search-results {
   display: none;
   height: calc(100vh - #{quadruple($space-32) + $space-32 + $space-8}); // => calc(100vh - 168px)
   overflow: auto;
@@ -107,7 +107,7 @@
   }
 }
 
-.c-search-result {
+.search-result {
   display: flex;
   align-items: center;
   line-height: 1;
@@ -186,7 +186,7 @@
   @include attention() {
     color: var(--color-text);
 
-    .c-search-result__title {
+    .search-result__title {
       text-decoration: underline;
     }
   }
