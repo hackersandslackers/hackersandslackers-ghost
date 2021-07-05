@@ -27,10 +27,11 @@
   }
 
   .footer-title {
-    color: var(--color-dark);
+    color: $header-color;
     font-family: $header-font-secondary;
     font-size: 16px;
     text-transform: uppercase;
+    text-rendering: optimizelegibility;
   }
   @include mq($from: desktop) {
     padding-top: $space-80;
@@ -99,8 +100,10 @@
     font-weight: $type-400;
     line-height: $type-sm-lh;
     transition: color $global-faster-transition ease-in-out;
+    text-rendering: optimizelegibility;
+    color: $body-color;
     @include attention() {
-      color: var(--color-brand);
+      color: $theme-color;
     }
   }
 }

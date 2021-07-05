@@ -28,11 +28,10 @@
               </a>
             </li>
             {{#if @member}}
-              <li class='nav__item'><a href='{{ @site.url }}/account/' class='nav__link'>{{t 'Account' }}</a></li>
-              <li class='nav__item'><a href='#signout' class='nav__link' data-members-signout>{{t 'Log out' }}</a></li>
+              <li class='nav__item'><a href='#/portal/account' class='nav__link'>{{t 'Account' }}</a></li>
             {{else}}
-              <li class='nav__item'><a href='{{ @site.url }}/signin/' class='btn btn--small btn--outline'>{{t 'Log in' }}</a></li>
-              <li class='nav__item'><a href='{{ @site.url }}/subscribe/' class='btn btn--small btn--action'>{{t 'Subscribe' }}</a></li>
+              <li class='nav__item'><a href='#/portal/signin' class='btn btn--small btn--outline'>{{t 'Log in' }}</a></li>
+              <li class='nav__item'><a href='#/portal/signup' class='btn btn--small btn--action'>{{t 'Subscribe' }}</a></li>
             {{/if}}
           </ul>
         </div>

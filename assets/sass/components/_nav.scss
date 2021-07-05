@@ -3,8 +3,12 @@
 \*------------------------------------*/
 
 .nav-wrap {
-  @include mq($until: desktop) {
-    display: flex;
+  display: flex;
+  flex: 2;
+  align-items: center;
+  justify-content: space-between;
+
+  @media(max-width: $mobile) {
     visibility: hidden;
     z-index: 10;
     position: fixed;
@@ -12,7 +16,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    flex-direction: column;
+    flex-direction: column !important;
     align-items: center;
     width: 100%;
     height: 100vh;
@@ -23,49 +27,50 @@
 
     &.is-active {
       visibility: visible;
+      display: block;
+      justify-content: unset;
       transform: scale(1);
       opacity: 1;
       transition: all half($global-transition) cubic-bezier(.694, 0, .335, 1);
-    }
-  }
+      padding: 42px;
 
-  @include mq($from: desktop) {
-    display: flex;
-    flex: 2;
-    align-items: center;
-    justify-content: space-between;
+      .o-plain-list {
+        visibility: visible;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
   }
 }
 
 .nav {
-  @include mq($until: desktop) {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  &--left {
+    justify-content: end;
+  }
+
+  &--right {
+    justify-content: flex-end;
+    @media(max-width: $tablet) {
+      visibility: hidden;
+    }
+  }
+
+  @include mq($until: mobile) {
     width: 100%;
     padding-right: $space-32;
     padding-left: $space-32;
   }
 
-  @include mq($from: desktop) {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-
-    &--left {
-      justify-content: end;
-    }
-
-    &--right {
-      justify-content: flex-end;
-    }
-  }
-
   &__item {
     &:not(:last-child) {
-      @include mq($from: desktop) {
         margin-right: $space-24;
-      }
     }
 
-    @include mq($until: desktop) {
+    @media(max-width: $mobile) {
       margin-bottom: $space-16;
     }
   }
@@ -87,7 +92,7 @@
     white-space: nowrap;
     transition: color $global-faster-transition;
 
-    @include mq($until: desktop) {
+    @include mq($until: tablet) {
       font-size: $type-sm;
       line-height: $type-sm-lh;
     }
@@ -113,17 +118,18 @@
 }
 
 .nav-toggle {
-  z-index: 10;
-  position: absolute;
-  top: 50%;
-  right: 0;
-  width: $space-24;
-  height: $space-16;
-  transform: translateY(-50%);
-  cursor: pointer;
+  display: none;
 
-  @include mq($from: desktop) {
-    display: none;
+  @media(max-width: $tablet) {
+    display: block;
+    z-index: 10;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: $space-24;
+    height: $space-16;
+    transform: translateY(-50%);
+    cursor: pointer;
   }
 
   &__icon {

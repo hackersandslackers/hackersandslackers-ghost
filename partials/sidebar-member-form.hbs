@@ -1,8 +1,19 @@
-{{#unless @member}}
-  <div class='widget newsletter'>
+<div class='widget newsletter'>
+  {{#unless @member}}
     <div class='title-bar'>
       <h3 class='title-bar__title'>{{t 'Newsletter'}}</h3>
     </div>
-    {{> subscribe-form inputLabel='subscribe-email-sidebar'}}
-  </div>
-{{/unless}}
+    <p class='u-type-500 u-mb-16'>{{t 'Join the newsletter to receive occasional updates.' }}</p>
+    <a class="gh-head-button btn btn--small btn--action subscribe-form__btn" href="#/portal/signup">
+        {{t 'Subscribe'}}
+    </a>
+  {{else}}
+    <div class='title-bar'>
+      <h3 class='title-bar__title'>{{t 'Account'}}</h3>
+    </div>
+    <p class='u-type-500 u-mb-16'>{{t 'Welcome back! Manage your account.' }}</p>
+    <a class="gh-head-button btn btn--small btn--action subscribe-form__btn" href="#/portal/account">
+        {{t 'Account'}}
+    </a>
+  {{/unless}}
+</div>

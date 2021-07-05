@@ -65,6 +65,10 @@
     font-size: 1.2em;
     font-weight: $type-500;
     line-height: $type-sm-lh;
+    @media(max-width: $mobile) {
+      font-size: .95em;
+      line-height: 1.15;
+    }
   }
 
   &__meta {

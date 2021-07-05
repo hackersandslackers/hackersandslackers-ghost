@@ -1,20 +1,20 @@
 THEME_PATH := $(CURDIR)
-export GHOST_PATH='/Users/toddbirchard/projects/ghosttheme-stockholm'
+export GHOST_PATH='/Users/toddbirchard/projects/ghostlocal'
 
 define HELP
-Compile & manage hackersandslackers Ghost theme.
+Manage development of hackersandslackers Ghost theme.
 
 Usage:
 
 make build           - Install all dependencies & build theme.
-make dev             - Build & compile site.
-make fix             - Fix security vulnerabilities.
-make clean           - Purge cache & dependencies, logs, & lockfiles.
-make update          - Update npm production dependencies.
+make dev             - Restart local ghost instant and compile site.
+make clean           - Purge cache, locked, dependencies, logs, & lockfiles.
+make update          - Update production dependencies to latest versions.
+make reset           - Clean, update, and build site
 endef
 export HELP
 
-.PHONY: build install fix clean update help
+.PHONY: build dev clean update reset help
 
 all help:
 	@echo "$$HELP"
@@ -24,24 +24,26 @@ build: clean
 	gulp
 
 .PHONY: dev
-dev: build
+dev:
 	cd $(GHOST_PATH) && ghost restart --verbose && cd $(THEME_PATH)
-
+	gulp
 
 .PHONY: clean
 clean:
 	find . -name 'package-lock.json' -delete
+	find . -name 'yarn-error.log' -delete
 	find . -wholename '*.lock' -delete
 	find . -wholename '.yarn' -delete
 	find . -wholename '**/node_modules' -delete
 	find . -wholename '**/bower_components' -delete
 
-.PHONY: reset
-reset: clean
-	npm i
-	npm audit fix
-
 .PHONY: update
 update:
+	npm install -g npm-check-updates
 	ncu -u --dep=prod
 	yarn install
+
+.PHONY: reset
+reset: clean
+	make update
+	make build

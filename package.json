@@ -6,7 +6,7 @@
   "engines": {
     "node": ">=14",
     "ghost": ">=4.0.0",
-    "ghost-api": ">=4"
+    "ghost-api": "v4"
   },
   "keywords": [
     "ghost",

@@ -6,8 +6,9 @@
   display: flex;
   align-items: baseline;
   justify-content: space-between;
-  margin-bottom: $space-24;
+  margin-bottom: 12px;
   border-bottom: 1px solid var(--color-border);
+  color: $header-color;
 
   &__title {
     margin-bottom: 0;

@@ -120,7 +120,7 @@
       '!.git/**',
       '!.DS_Store'
     ], { dot: true })
-    .pipe(zip('krabi.zip'))
+    .pipe(zip('hackers.zip'))
     .pipe(gulp.dest('../'))
     done();
   });

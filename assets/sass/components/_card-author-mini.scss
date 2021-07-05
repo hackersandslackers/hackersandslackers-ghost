@@ -6,9 +6,25 @@
   display: flex;
   width: 100%;
   border-radius: $global-border-radius;
+  transition: $transition;
+  padding: 12px 12px;
 
-  &:not(:last-child) {
-    margin-bottom: $space-24;
+  &:first-child {
+    padding: 0 12px 12px;
+  }
+
+  &:last-child {
+    padding: 12px 12px 6px;
+  }
+
+
+  &:hover {
+    cursor: pointer;
+    background-color: $hover-color;
+
+    * {
+      color: white !important;
+    }
   }
 
   &__media {
@@ -28,6 +44,7 @@
   }
 
   &__name {
+    color: $header-color;
     font-size: 18px;
     font-weight: $type-700;
     letter-spacing: $global-letter-spacing;
