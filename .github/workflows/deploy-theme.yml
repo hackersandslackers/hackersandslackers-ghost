@@ -1,4 +1,4 @@
-name: Krabi Theme Deploy
+name: Ghost Theme Deploy
 on:
   push:
     branches:
