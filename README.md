@@ -7,4 +7,4 @@
 [![GitHub Stars](https://img.shields.io/github/stars/hackersandslackers/hackersandslackers-ghost.svg?style=flat-square&colorB=ebcb8b&colorA=4c566a&logo=GitHub)](https://github.com/hackersandslackers/hackersandslackers-ghost/stargazers)
 [![GitHub Forks](https://img.shields.io/github/forks/hackersandslackers/hackersandslackers-ghost.svg?style=flat-square&colorB=ebcb8b&colorA=4c566a&logo=GitHub)](https://github.com/hackersandslackers/hackersandslackers-ghost/network)
 
-![Hackersandslackers Theme Preview](https://raw.githubusercontent.com/hackersandslackers/hackersandslackers-ghost/master/.github/preview.jpg?token=AAU6YMSAFPVFIIDAG4GYFMTAWNMTQ)
+![Hackersandslackers Theme Preview](./.github/preview.jpg?token=AAU6YMSAFPVFIIDAG4GYFMTAWNMTQ)

@@ -39,7 +39,8 @@ clean:
 
 .PHONY: update
 update:
-	npm install -g npm-check-updates
+	npm install npm@latest -g
+	npm install -g npm-check-updates@latest
 	ncu -u --dep=prod
 	yarn install
 
