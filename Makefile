@@ -1,8 +1,8 @@
 THEME_PATH := $(CURDIR)
-export GHOST_PATH='/Users/toddbirchard/projects/ghostlocal'
+export DEV_GHOST_PATH='/Users/toddbirchard/projects/ghostlocal'
 
 define HELP
-Manage development of hackersandslackers Ghost theme.
+Manage development of Hackersandslackers Ghost theme.
 
 Usage:
 
@@ -10,7 +10,7 @@ make build           - Install all dependencies & build theme.
 make dev             - Restart local ghost instant and compile site.
 make clean           - Purge cache, locked, dependencies, logs, & lockfiles.
 make update          - Update production dependencies to latest versions.
-make reset           - Clean, update, and build site
+make reset           - Clean, update, and build site.
 endef
 export HELP
 
@@ -25,7 +25,7 @@ build: clean
 
 .PHONY: dev
 dev:
-	cd $(GHOST_PATH) && ghost restart --verbose && cd $(THEME_PATH)
+	cd $(DEV_GHOST_PATH) && ghost restart --verbose && cd $(THEME_PATH)
 	gulp
 
 .PHONY: clean

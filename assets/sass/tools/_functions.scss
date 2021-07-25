@@ -3,11 +3,11 @@
 // *----------------------------------*/
 
 @function half($n) {
-  @return round($n / 2);
+  @return round($n * 0.5);
 }
 
 @function quarter($n) {
-  @return round($n / 4);
+  @return round($n * 0.25);
 }
 
 @function double($n) {
