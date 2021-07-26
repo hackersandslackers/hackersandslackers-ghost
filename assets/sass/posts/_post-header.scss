@@ -8,11 +8,7 @@
 }
 
 .post-image {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
   object-fit: cover;
   transition: $transition;
 
@@ -22,7 +18,11 @@
 }
 
 .post-header {
-  padding: 0 60px;
+  margin-bottom: 30px;
+
+  &__details {
+    padding: 0 30px;
+  }
 
   &__title {
     @include post-title();
