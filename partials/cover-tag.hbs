@@ -1,0 +1,17 @@
+<!-- Start Tag Cover -->
+{{#tag}}
+  <div class="cover">
+    <h1 class="tag-name">
+      <i class="fas fa-tag"></i> <span>{{name}}</span>
+    </h1>
+      <div class="post-count">
+        {{plural pagination.total empty=(t "No posts") singular=(t "1 Post") plural=(t "% Posts")}}
+      </div>
+      {{#if description}}
+        <div class="tag-description">
+          {{description}}
+        </div>
+      {{/if}}
+  </div>
+{{/tag}}
+<!-- End Tag Cover -->

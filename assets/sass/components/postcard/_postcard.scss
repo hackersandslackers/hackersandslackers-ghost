@@ -62,7 +62,7 @@
     overflow-y: hidden;
     color: var(--color-gray);
     font-family: $body-font-medium;
-    font-size: 1.2em;
+    font-size: 1.1em;
     font-weight: $type-500;
     line-height: $type-sm-lh;
     @media(max-width: $mobile) {
@@ -80,7 +80,7 @@
     margin-top: $space-16;
     padding-top: $space-16;
     border-top: .5px solid var(--color-border);
-    font-size: $type-xs;
+    font-size: 13px;
     font-weight: $type-500;
     letter-spacing: $global-letter-spacing;
     line-height: $type-xs-lh;

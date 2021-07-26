@@ -1,5 +1,6 @@
 THEME_PATH := $(CURDIR)
-export DEV_GHOST_PATH='/Users/toddbirchard/projects/ghostlocal'
+DEV_GHOST_PATH := '/Users/toddbirchard/projects/ghostlocal'
+DEV_GHOST_THEME_PATH := '/Users/toddbirchard/projects/ghostlocal/content/themes/hackersandslackers-ghost'
 
 define HELP
 Manage development of Hackersandslackers Ghost theme.
@@ -25,7 +26,10 @@ build: clean
 
 .PHONY: dev
 dev:
+	if [ -d $(DEV_GHOST_THEME_PATH) ]; then rm -rf $(DEV_GHOST_THEME_PATH); fi
+	cp -R $(THEME_PATH) $(DEV_GHOST_THEME_PATH)
 	cd $(DEV_GHOST_PATH) && ghost restart --verbose && cd $(THEME_PATH)
+	cd $(DEV_GHOST_THEME_PATH)
 	gulp
 
 .PHONY: clean

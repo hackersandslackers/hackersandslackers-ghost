@@ -1,11 +1,19 @@
 <header class='post-header'>
   {{#if feature_image}}
-    <figure class='post-image-wrap'>
-      <img alt='' class='post-image lazyload' data-srcset='
-        {{ img_url feature_image size='ml' }} 346w,
-        {{ img_url feature_image size='lg' }} 692w,
-        {{ img_url feature_image size='xl' }} 1384w' sizes='(min-width: 1260px) 692px, (min-width: 1040px) calc(34vw + 270px), (min-width: 640px) calc(90vw - 61px), calc(100vw - 32px)' data-src='{{ img_url feature_image size='xl' }}'>
-    </figure>
+    <picture class="post-image">
+      <source
+          media="(max-width:600px)"
+          srcset='{{ img_url feature_image size='ml' }}'
+      />
+      <source
+          srcset='{{ img_url feature_image size='xl' }}' />
+      <img
+           class="post-card-image lazyload"
+           data-src='{{ img_url featureImage size='xl' }}'
+           alt='{{ title }}'
+           title='{{ title }}'
+      />
+    </picture>
   {{/if}}
 
   <h1 class='post-title'>{{ title }}</h1>
