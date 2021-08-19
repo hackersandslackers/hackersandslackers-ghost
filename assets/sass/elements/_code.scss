@@ -25,7 +25,7 @@ $nord15: #b48ead;
   padding: 15px 20px 20px;
   overflow-x: scroll;
   background: $nord0;
-  color: $nord6;
+  color: white;
   font-family: $monospace-font !important;
   font-size: 0.85em !important;
   hyphens: none;
@@ -36,6 +36,7 @@ $nord15: #b48ead;
   word-break: normal;
   word-spacing: normal;
   tab-size: 4;
+  text-shadow: unset !important;
   @media (max-width: $mobile) {
     @include mobile-horizontal-scroll;
     @include mobile-full-width;
@@ -43,6 +44,10 @@ $nord15: #b48ead;
     border-radius: 0 !important;
     font-size: 0.8em !important;
     white-space: pre-wrap;
+  }
+
+  * {
+    text-shadow: unset !important;
   }
 
   &::selection {
@@ -176,6 +181,7 @@ $nord15: #b48ead;
   padding: 20px;
   overflow: auto;
   background: $nord0;
+  color: white;
 }
 
 :not(pre) > code[class*="language-"] {

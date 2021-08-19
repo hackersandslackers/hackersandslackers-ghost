@@ -18,10 +18,9 @@
 }
 
 .post-header {
-  margin-bottom: 30px;
 
   &__details {
-    padding: 0 30px;
+    padding: 30px 50px 0;
   }
 
   &__title {
@@ -29,16 +28,13 @@
   }
 
   &__excerpt {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: $space-16;
+    margin: 0 0 10px;
     color: var(--color-gray);
-    font-size: $type--h-xxs;
-    line-height: $type--h-xxs-lh;
+    font-size: 1.2em;
   }
 
   &__meta {
-    margin-top: $space-32;
+    margin-top: $space-16;
     font-size: $type-xs;
     line-height: $type-xs-lh;
     letter-spacing: $global-letter-spacing;
