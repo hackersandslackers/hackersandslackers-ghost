@@ -56,8 +56,8 @@
 
 @mixin mobile-full-width() {
   min-width: 100%;
-  margin-right: calc("-50vw + 50%") !important;
-  margin-left: calc("-50vw + 50%") !important;
+  margin-left: calc(-100vw / 2 + 500px / 2);
+  margin-right: calc(-100vw / 2 + 500px / 2);
   border-right: 0;
   border-left: 0;
 }

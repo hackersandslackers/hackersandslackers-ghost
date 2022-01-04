@@ -3,7 +3,7 @@
   'use strict';
 
   // Include Gulp & Plugins
-  var gulp         = require('gulp'),
+  let gulp         = require('gulp'),
       sass         = require('gulp-sass')(require('sass')),
       rtlcss       = require('gulp-rtlcss'),
       cleanCSS     = require('gulp-clean-css'),
@@ -63,11 +63,6 @@
   // JavaScript
   gulp.task('js', function(done) {
     return gulp.src([
-      './bower_components/jquery/dist/jquery.js',
-      './bower_components/bootstrap-transition/scripts/transition.js',
-      './bower_components/zoom.js/dist/zoom.js',
-      './bower_components/jquery.fitvids/jquery.fitvids.js',
-      './bower_components/dragscroll/dragscroll.js',
       './node_modules/lazysizes/lazysizes.min.js',
       './node_modules/evil-icons/assets/evil-icons.min.js',
       './node_modules/clipboard/dist/clipboard.js',

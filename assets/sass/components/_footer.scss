@@ -6,8 +6,13 @@
   padding: $space-40 0;
   border-top: 0.5px solid var(--color-border);
   background-color: var(--bg-white);
-  max-width: 1000px;
+  width: 1000px;
   margin: $space-40 auto 0;
+  max-width: 95%;
+  @include mq($until: tablet) {
+    width: auto;
+    padding: 20px;
+  }
 
   .o-grid {
     justify-content: space-between;
@@ -16,9 +21,17 @@
 
   .footer-section {
     max-width: 27%;
+    @include mq($until: desktop) {
+      max-width: unset;
+      margin-bottom: 30px;
+    }
 
     &.info-section {
       max-width: 23%;
+      @include mq($until: desktop) {
+        max-width: unset;
+        margin-bottom: 30px;
+      }
     }
 
     &.newsletter {
