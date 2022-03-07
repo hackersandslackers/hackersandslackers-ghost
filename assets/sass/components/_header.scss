@@ -4,9 +4,13 @@
 
 .header {
   position: relative;
-  padding: ($space-16 + half($space-8)) 0;
+  padding: 20px 0;
   background-color: var(--bg-white);
   border-bottom: .5px solid var(--color-border);
+
+  @include mq($from: mobile) {
+    padding: 15px 0;
+  }
 
   &__inner {
     position: relative;

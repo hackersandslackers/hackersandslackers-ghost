@@ -4,20 +4,20 @@
 
   // Include Gulp & Plugins
   var gulp         = require('gulp'),
-      sass         = require('gulp-sass')(require('sass')),
-      rtlcss       = require('gulp-rtlcss'),
-      cleanCSS     = require('gulp-clean-css'),
-      autoprefixer  = require('gulp-autoprefixer'),
-      concat       = require('gulp-concat'),
-      rename       = require('gulp-rename'),
-      uglify       = require('gulp-uglify'),
-      jshint       = require('gulp-jshint'),
-      plumber      = require('gulp-plumber'),
-      gutil        = require('gulp-util'),
-      replace      = require('gulp-replace'),
-      size         = require('gulp-size'),
-      zip          = require('gulp-zip'),
-      fs           = require('fs');
+    sass         = require('gulp-sass')(require('sass')),
+    rtlcss       = require('gulp-rtlcss'),
+    cleanCSS     = require('gulp-clean-css'),
+    autoprefixer  = require('gulp-autoprefixer'),
+    concat       = require('gulp-concat'),
+    rename       = require('gulp-rename'),
+    uglify       = require('gulp-uglify'),
+    jshint       = require('gulp-jshint'),
+    plumber      = require('gulp-plumber'),
+    gutil        = require('gulp-util'),
+    replace      = require('gulp-replace'),
+    size         = require('gulp-size'),
+    zip          = require('gulp-zip'),
+    fs           = require('fs');
 
   // Set the compiler to use Dart Sass instead of Node Sass
   sass.compiler = require('sass');
@@ -31,32 +31,32 @@
   // SASS
   gulp.task('sass', function (done) {
     return gulp.src('./assets/sass/*.scss')
-    .pipe(plumber({ errorHandler: onError }))
-    .pipe(sass())
-    .pipe(autoprefixer())
-    .pipe(rename({suffix: '-min'}))
-    .pipe(cleanCSS())
-    .pipe(gulp.dest('./assets/css'))
-    .pipe(rtlcss())                     // Convert to RTL
-    .pipe(rename({ suffix: '-rtl' }))   // Rename style.css to 'style-rtl.css'
-    .pipe(gulp.dest('./assets/css'))    // Output RTL stylesheets
-    .pipe(size())
+      .pipe(plumber({ errorHandler: onError }))
+      .pipe(sass())
+      .pipe(autoprefixer())
+      .pipe(rename({suffix: '-min'}))
+      .pipe(cleanCSS())
+      .pipe(gulp.dest('./assets/css'))
+      .pipe(rtlcss())                     // Convert to RTL
+      .pipe(rename({ suffix: '-rtl' }))   // Rename style.css to 'style-rtl.css'
+      .pipe(gulp.dest('./assets/css'))    // Output RTL stylesheets
+      .pipe(size())
     done();
   });
 
   // inlineCSS
   gulp.task('inlinecss', function(done) {
     return gulp.src(['partials/inline-css.hbs'])
-    .pipe(replace('@@compiled_css', fs.readFileSync('assets/css/style-min.css')))
-    .pipe(gulp.dest('partials/compiled'))
+      .pipe(replace('@@compiled_css', fs.readFileSync('assets/css/style-min.css')))
+      .pipe(gulp.dest('partials/compiled'))
     done();
   });
 
   // inlineCSS-RTL
   gulp.task('inlinecss-rtl', function(done) {
     return gulp.src(['partials/inline-css-rtl.hbs'])
-    .pipe(replace('@@compiled_css_rtl', fs.readFileSync('assets/css/style-min-rtl.css')))
-    .pipe(gulp.dest('partials/compiled'))
+      .pipe(replace('@@compiled_css_rtl', fs.readFileSync('assets/css/style-min-rtl.css')))
+      .pipe(gulp.dest('partials/compiled'))
     done();
   });
 
@@ -93,7 +93,7 @@
       .pipe(uglify())
       .pipe(gulp.dest('./assets/js'))
       .pipe(size())
-      done();
+    done();
   });
 
   // Watch
@@ -120,8 +120,8 @@
       '!.git/**',
       '!.DS_Store'
     ], { dot: true })
-    .pipe(zip('hackers.zip'))
-    .pipe(gulp.dest('../'))
+      .pipe(zip('hackers.zip'))
+      .pipe(gulp.dest('../'))
     done();
   });
 
