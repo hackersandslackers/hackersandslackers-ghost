@@ -4,7 +4,7 @@
   max-width: 1000px;
   margin: auto;
   column-gap: 30px;
-  @media(max-width: $smalldesktop) {
+  @media(max-width: $small-desktop) {
     max-width: 95% !important;
   }
   @media(max-width: $tablet) {

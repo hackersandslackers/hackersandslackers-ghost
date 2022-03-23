@@ -1,11 +1,9 @@
 // *----------------------------------*\
 //  Settings
 // *----------------------------------*/
-
-@import 'global';
 @import 'spaces';
 @import 'colors';
 @import 'type';
-@import 'assets/sass/breakpoints';
+@import '../breakpoints';
 @import 'grid';
 @import 'fonts';

@@ -1,7 +1,50 @@
 /*------------------------------------*\
   Components > Post Card
 \*------------------------------------*/
-@import 'post-card-mixins';
+@mixin title() {
+  margin: 0;
+  padding: 0;
+  color: $header-color;
+  font-family: $header-font;
+  font-size: 1.9em;
+  font-weight: unset;
+  letter-spacing: -.3px;
+  line-height: 1.1;
+  transition: $transition;
+  @media(max-width: $small-desktop) {
+    font-size: 1.8em !important;
+  }
+  @media(max-width: $tablet) {
+    margin-bottom: 0;
+  }
+  @media(max-width: $mobile) {
+    font-size: 1.6em !important;
+  }
+  @media(max-width: $small-mobile) {
+    font-size: 1.5em;
+  }
+
+  &:hover {
+    color: $hover-color;
+    cursor: pointer;
+  }
+}
+
+@mixin primary-tag() {
+  padding: 6px;
+  border-radius: 3px;
+  color: white;
+  font-size: 1.1em;
+  font-weight: 600;
+  line-height: $type-single-line-height;
+  transition: 0.2s all ease-out;
+
+  &:hover {
+    background: white;
+    cursor: pointer;
+  }
+}
+
 
 .post-card {
   display: flex;
@@ -13,6 +56,10 @@
   border-radius: $global-border-radius;
   background-color: var(--bg-white);
   box-shadow: $global-shadow;
+
+  @include mq($from: mobile) {
+    margin-bottom: 20px;
+  }
 
   &__media {
     overflow: hidden;
@@ -30,6 +77,11 @@
     -o-object-fit: cover;
     object-fit: cover;
 
+    @include mq($from: small-desktop) {
+      width: 100%;
+      height: auto;
+    }
+
     &:hover {
       opacity: .7;
       cursor: pointer;
@@ -39,10 +91,10 @@
   &__content {
     flex-grow: 1;
     margin-top: 0 !important;
-    padding: $space-24;
+    padding: 20px 25px;
 
-    @include mq($from: desktop) {
-      padding: $space-32;
+    @include mq($from: mobile) {
+      padding: 20px;
     }
   }
 

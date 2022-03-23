@@ -19,6 +19,10 @@
 
     &.info-section {
       max-width: 23%;
+
+      @include mq($from: mobile) {
+        max-width: unset;
+      }
     }
 
     &.newsletter {

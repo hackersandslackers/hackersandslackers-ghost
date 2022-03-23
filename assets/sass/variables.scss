@@ -1,0 +1,44 @@
+// *------------------------------------*\
+// Global Variables
+// *------------------------------------*/
+$global-transition: 500ms;
+$global-faster-transition: .26s;
+$global-border-radius: 2px;
+$global-letter-spacing: .5px;
+
+$global-shadow: 0 1px 4px rgba(39, 44, 49, .15);
+
+$transition: all 0.2s ease-out;
+
+// Theme colors
+$theme-color: #0297f6;
+$hover-color: #40cebb;
+$bg-white: #f4f8fb;
+
+// Font colors
+$header-color: #4e576a;
+$body-color: #414d5a;
+$secondary-font-color: #4d525d;
+$text-color-light: #494e59;
+$light-header-color: #6c7888;
+
+// Form colors
+$color-error: #bf616a;
+$color-success: #a3be8c;
+
+// Social colors
+$facebook-color: #3b5998;
+$medium-color: #000;
+$twitter-color: #53b6d8;
+$google-color: #dc4a38;
+$linkedin-color: #4875B4;
+$github-color: #000;
+$rss-color: #ff6501;
+$reddit-color: #ff4500;
+$pocket-color: #e55e6f;
+
+$small-mobile: 400px;
+$mobile: 600px;
+$tablet: 800px;
+$small-desktop: 1020px;
+$desktop: 1000px;
