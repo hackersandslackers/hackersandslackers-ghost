@@ -1,3 +1,12 @@
+assets/css/**
+assets/js/ghostHunter.js
+assets/js/app.js
+
+partials/compiled/*
+node_modules/*
+bower_components/*
+!plugins/*/src/*.js
+
 bower_components/jquery/dist/jquery.js
 bower_components/bootstrap-transition/scripts/transition.js
 bower_components/zoom.js/dist/zoom.js
@@ -19,5 +28,3 @@ node_modules/lunr-languages/lunr.fi.js
 node_modules/lunr-languages/lunr.nl.js
 node_modules/lunr-languages/lunr.da.js
 node_modules/lunr-languages/lunr.multi.js
-assets/js/ghostHunter.js
-assets/js/app.js

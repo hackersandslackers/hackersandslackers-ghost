@@ -8,7 +8,7 @@ const HtmlMinifierPlugin = require(`html-minifier-webpack-plugin`)
 
 
 module.exports = {
-  mode: `production`,
+  mode: "production",
   plugins: [
     new Dotenv({ path: `./.env` }),
     new FontConfigWebpackPlugin(),
