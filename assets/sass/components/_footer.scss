@@ -24,13 +24,6 @@
       margin-bottom: 40px;
     }
 
-    &.info-section {
-      max-width: 23%;
-      @media (max-width: 800px) {
-        max-width: unset;
-      }
-    }
-
     &.newsletter {
       min-width: 250px;
     }
@@ -42,9 +35,6 @@
     font-size: 16px;
     text-transform: uppercase;
     text-rendering: optimizelegibility;
-  }
-  @include mq($from: desktop) {
-    padding-top: $space-80;
   }
 
   &__section:not(:last-child) {
@@ -106,9 +96,9 @@
     display: block;
     margin-bottom: half($space-8);
     padding: 0 0 half($space-8);
-    font-size: $type-sm;
     font-weight: $type-400;
     line-height: $type-sm-lh;
+    font-size: .95em;
     transition: color $global-faster-transition ease-in-out;
     text-rendering: optimizelegibility;
     color: $body-color;
