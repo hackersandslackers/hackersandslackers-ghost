@@ -1,3 +1,5 @@
+
+
 THEME_PATH := $(CURDIR)
 DEV_GHOST_PATH := '/Users/toddbirchard/projects/ghostlocal'
 DEV_GHOST_THEME_PATH := '/Users/toddbirchard/projects/ghostlocal/content/themes/hackersandslackers-ghost'
@@ -21,7 +23,7 @@ all help:
 	@echo "$$HELP"
 
 .PHONY: build
-build: clean
+build:
 	gulp
 
 .PHONY: dev
@@ -44,8 +46,10 @@ clean:
 .PHONY: update
 update:
 	npm install npm@latest -g
+	curl --compressed -o- -L https://yarnpkg.com/install.sh | bash
+	bower install
 	npm install -g npm-check-updates@latest
-	ncu -u --dep=prod
+	ncu -u
 	yarn install
 
 .PHONY: reset

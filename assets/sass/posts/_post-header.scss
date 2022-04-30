@@ -34,10 +34,9 @@
   }
 
   &__meta {
-    margin-top: $space-16;
+    margin: $space-24 0;
     font-size: $type-xs;
     line-height: $type-xs-lh;
-    letter-spacing: $global-letter-spacing;
     letter-spacing: $global-letter-spacing;
 
     @media (max-width: 800px) {

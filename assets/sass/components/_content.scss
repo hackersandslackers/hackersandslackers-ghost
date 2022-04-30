@@ -57,6 +57,7 @@
 
   h1, h2, h3, h4, h5, h6 {
     margin-top: $space-48;
+    font-family: $body-font;
 
     &:first-child {
       margin-top: 0;
@@ -114,8 +115,10 @@
   }
 
   dd, ol, ul {
+    font-size: 1em;
     padding-left: $space-8;
     padding-right: $space-16;
+    margin: 0 0 25px;
 
     > * + * {
       margin-top: $space-8;

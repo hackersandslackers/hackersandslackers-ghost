@@ -12,6 +12,12 @@
   }
 }
 
+.post-header {
+  &__excerpt {
+    font-family: $body-font-medium !important;
+  }
+}
+
 .post-title {
   display: block;
   order: 2;

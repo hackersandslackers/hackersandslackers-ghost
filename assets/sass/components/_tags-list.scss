@@ -4,8 +4,11 @@
 
 .tags-list-container {
   margin-bottom: $space-32;
-  background-color: var(--bg-white);
+  background-color: white;
   box-shadow: $global-shadow;
+  @media (max-width: 800px) {
+    margin-bottom: unset;
+  }
 }
 
 .tags-list-wrap {

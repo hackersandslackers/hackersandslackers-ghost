@@ -29,6 +29,10 @@
     height: 372px;
     -o-object-fit: cover;
     object-fit: cover;
+    @media (max-width: 800px) {
+      width: unset;
+      height: auto;
+    }
 
     &:hover {
       opacity: .7;
