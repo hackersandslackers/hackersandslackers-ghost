@@ -18,7 +18,7 @@
   }
 
   a {
-    color: var(--color-text);
+    color: $color-text;
     text-decoration: underline;
 
     @include attention() {
@@ -51,7 +51,7 @@
 
     &:before {
       content: '. . .';
-      color: var(--color-text);
+      color: $color-text;
     }
   }
 

@@ -5,8 +5,7 @@
   "demo": "https://hackersandslackers.com/",
   "engines": {
     "node": ">=16",
-    "ghost": ">=5.0.0",
-    "ghost-api": "v4"
+    "ghost": ">=5.0.0"
   },
   "keywords": [
     "ghost",

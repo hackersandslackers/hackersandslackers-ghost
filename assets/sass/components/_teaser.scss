@@ -50,10 +50,10 @@
   }
 
   @include attention() {
-    color: var(--color-text);
+    color: $color-text;
 
     .teaser__title {
-      color: var(--color-text);
+      color: $color-text;
       text-decoration: underline;
     }
   }

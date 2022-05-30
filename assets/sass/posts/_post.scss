@@ -25,10 +25,6 @@
       margin: 0;
     }
 
-    .post-roundup-blurb {
-      @include lynx-roundup-blurb;
-    }
-
     .intro-notice {
       @include post-intro-notice;
     }

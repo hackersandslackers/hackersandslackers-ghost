@@ -98,7 +98,7 @@
     }
 
     &--current {
-      color: var(--color-text);
+      color: $color-text;
 
       .home-template & {
         color: var(--color-gray);
@@ -106,7 +106,7 @@
     }
 
     @include attention() {
-      color: var(--color-text);
+      color: $color-text;
     }
   }
 
@@ -137,7 +137,7 @@
     left: 0;
     width: $space-24;
     height: 1px;
-    background: var(--color-text);
+    background: $color-text;
     cursor: pointer;
 
     &:before,
@@ -159,7 +159,7 @@
       &:after {
         visibility: visible;
         position: relative;
-        background: var(--color-text);
+        background: $color-text;
       }
 
       &:before {

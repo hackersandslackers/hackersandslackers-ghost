@@ -55,7 +55,7 @@
 
     @include attention() {
       &__author_name {
-        color: var(--color-text);
+        color: $color-text;
       }
     }
 
@@ -75,7 +75,6 @@
     height: $space-32;
     border-radius: 100%;
     margin-right: $space-8;
-    background-color: var(--bg-white);
   }
 
   &__author_image {

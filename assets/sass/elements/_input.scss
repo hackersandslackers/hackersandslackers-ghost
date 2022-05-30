@@ -8,7 +8,7 @@ input {
   border: 1px solid $input-color-border;
   border-radius: $global-border-radius;
   background-color: var(--color-white);
-  color: var(--color-text);
+  color: $color-text;
   font-family: $body-font;
 }
 

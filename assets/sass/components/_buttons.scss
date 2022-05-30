@@ -5,7 +5,7 @@
 .btn {
   display: inline-block;
   padding: $space-16 $space-32;
-  color: var(--color-white);
+  color: white;
   background-color: var(--color-dark);
   font-size: $type-xs;
   line-height: $type-xs-lh;
@@ -44,27 +44,27 @@
 
   &--outline {
     color: var(--color-brand);
-    background-color: var(--bg-white);
+    background-color: white;
     box-shadow: inset 0 0 0 1px var(--color-brand);
 
     @include attention() {
-      color: var(--color-white);
+      color: white;
       background-color: var(--color-brand);
     }
   }
 
   &--action {
-    color: var(--color-white);
+    color: white;
     background-color: var(--color-brand);
   }
 
   &--danger {
-    color: var(--color-white);
+    color: white;
     background-color: var(--color-error);
   }
 
   &--dark {
-    color: var(--color-white);
+    color: white;
     background-color: var(--bg-dark);
   }
 

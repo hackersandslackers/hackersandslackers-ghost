@@ -11,7 +11,7 @@ a.kg-bookmark-container {
   min-height: 144px;
   border-radius: $global-border-radius;
   background-color: var(--bg-white);
-  color: var(--color-text);
+  color: $color-text;
   text-decoration: none;
 
   @include attention() {

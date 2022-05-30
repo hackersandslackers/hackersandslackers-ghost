@@ -48,7 +48,7 @@
     padding-left: $space-56;
     font-weight: $type-600;
     border: .5px solid var(--color-border);
-    color: var(--color-text);
+    color: $color-text;
     -webkit-appearance: none;
 
     &::placeholder {
@@ -184,7 +184,7 @@
   }
 
   @include attention() {
-    color: var(--color-text);
+    color: $color-text;
 
     .search-result__title {
       text-decoration: underline;
