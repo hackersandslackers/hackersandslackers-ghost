@@ -3,7 +3,7 @@
   'use strict';
 
   // Include Gulp & Plugins
-  var gulp         = require('gulp'),
+  const gulp     = require('gulp'),
     sass         = require('gulp-sass')(require('sass')),
     rtlcss       = require('gulp-rtlcss'),
     cleanCSS     = require('gulp-clean-css'),
@@ -22,7 +22,7 @@
   // Set the compiler to use Dart Sass instead of Node Sass
   sass.compiler = require('sass');
 
-  var onError = function( err ) {
+  let onError = function( err ) {
     console.log('An error occurred:', gutil.colors.magenta(err.message));
     gutil.beep();
     this.emit('end');

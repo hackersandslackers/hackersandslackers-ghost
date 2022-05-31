@@ -1,5 +1,3 @@
-
-
 THEME_PATH := $(CURDIR)
 DEV_GHOST_PATH := '/Users/toddbirchard/projects/ghostlocal'
 DEV_GHOST_THEME_PATH := '/Users/toddbirchard/projects/ghostlocal/content/themes/hackersandslackers-ghost'
@@ -38,10 +36,11 @@ dev:
 clean:
 	find . -name 'package-lock.json' -delete
 	find . -name 'yarn-error.log' -delete
+	find . -name '.pnp.cjs' -delete
 	find . -wholename '*.lock' -delete
-	find . -wholename '.yarn' -delete
-	find . -wholename '**/node_modules' -delete
-	find . -wholename '**/bower_components' -delete
+	find . -type d -wholename './.yarn' -exec rm -rf {} +
+	find . -type d -wholename '**/node_modules' -exec rm -rf {} +
+	find . -type d -wholename './bower_components' -exec rm -rf {} +
 
 .PHONY: update
 update:

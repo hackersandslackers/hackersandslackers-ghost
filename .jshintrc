@@ -1,5 +1,6 @@
 {
   "undef": true,
+  "esversion": 6,
   "unused": true,
   "browser": true,
   "devel": true,

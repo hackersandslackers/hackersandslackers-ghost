@@ -29,7 +29,6 @@
 }
 
 @mixin figcaption() {
-  @include fill-available();
   margin: 0 auto;
   padding: 8px 0 0;
   color: #737883;
@@ -84,7 +83,6 @@
 }
 
 @mixin figcaption {
-  @include fill-available();
   margin: 0 auto;
   padding: 8px 0 0;
   color: #737883;
@@ -95,7 +93,6 @@
   white-space: normal;
   @include mq($from: mobile) {
     display: block;
-    width: 87% !important;
     height: auto;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -110,7 +107,7 @@
 
 @mixin code-figcaption {
   order: 1;
-  @include fill-available();
+  width: 100%;
   margin: 0 auto;
   padding: 14px 15px 10px;
   border-radius: 4px 4px 0 0;
@@ -122,9 +119,8 @@
   text-align: left;
   white-space: normal;
   @include mq($from: mobile) {
-    @include mobile-full-width;
-    padding: 15px;
-    border-top: 1px solid #dde1e9;
+    padding: 10px 15px;
+    font-size: 1.1em;
     border-radius: 0;
     line-height: 1;
     text-overflow: ellipsis;
