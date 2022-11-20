@@ -35,7 +35,7 @@
     "gulp-size": "4.0.1",
     "gulp-uglify": "3.0.2",
     "gulp-util": "3.0.8",
-    "jshint": "2.13.4",
+    "jshint": "2.13.6",
     "jshint-stylish": "2.2.1",
     "lazyload": "2.0.0-rc.2",
     "lazysizes": "5.3.2",
