@@ -42,7 +42,7 @@
     "lunr": "2.3.9",
     "lunr-languages": "1.9.0",
     "normalize.css": "8.0.1",
-    "prismjs": "1.28.0",
+    "prismjs": "1.29.0",
     "run-sequence": "2.2.1",
     "sass-mq": "6.0.0"
   },
