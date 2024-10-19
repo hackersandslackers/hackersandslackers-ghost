@@ -50,7 +50,7 @@
     "gulp": "4.0.2",
     "gulp-rtlcss": "2.0.0",
     "gulp-zip": "5.1.0",
-    "sass": "1.52.1"
+    "sass": "1.80.3"
   },
   "author": {
     "name": "Todd Birchard",
